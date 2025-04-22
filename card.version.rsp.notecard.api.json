@@ -1,0 +1,98 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.version.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.version API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "api": {
+            "description": "Major version of the Notecard API",
+            "type": "integer"
+        },
+        "board": {
+            "description": "Notecard hardware version number",
+            "type": "string"
+        },
+        "body": {
+            "description": "An object containing Notecard firmware details for programmatic access",
+            "type": "object",
+            "properties": {
+                "org": {
+                    "description": "Organization name set for the Notecard",
+                    "type": "string"
+                },
+                "product": {
+                    "description": "Product name set for the Notecard",
+                    "type": "string"
+                },
+                "version": {
+                    "description": "Firmware version of the Notecard",
+                    "type": "string"
+                },
+                "ver_major": {
+                    "description": "Major version of the Notecard firmware",
+                    "type": "integer"
+                },
+                "ver_minor": {
+                    "description": "Minor version of the Notecard firmware",
+                    "type": "integer"
+                },
+                "ver_patch": {
+                    "description": "Patch version of the Notecard firmware",
+                    "type": "integer"
+                },
+                "ver_build": {
+                    "description": "Build version of the Notecard firmware",
+                    "type": "integer"
+                },
+                "built": {
+                    "description": "Date and time the Notecard firmware was built",
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "cell": {
+            "description": "Notecard supports cellular connectivity",
+            "type": "boolean"
+        },
+        "device": {
+            "description": "DeviceUID of the Notecard",
+            "type": "string",
+            "pattern": "^dev:[0-9]{15}$"
+        },
+        "gps": {
+            "description": "Notecard has an onboard GPS module",
+            "type": "boolean"
+        },
+        "name": {
+            "description": "Official name of the device",
+            "type": "string"
+        },
+        "sku": {
+            "description": "Notecard Stock Keeping Unit (SKU)",
+            "type": "string"
+        },
+        "version": {
+            "description": "Complete firmware version of the Notecard",
+            "type": "string"
+        },
+        "wifi": {
+            "description": "Notecard supports Wi-Fi connectivity",
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "version"
+    ]
+}
