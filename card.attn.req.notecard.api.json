@@ -1,0 +1,129 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.attn.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.attn API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.attn"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.attn"
+            }
+        },
+        "files": {
+            "description": "An array of Notefile names to monitor for changes",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "pattern": "^.*\\.(q(o|i))|(db)s?$"
+            },
+            "minItems": 1
+        },
+        "mode" : {
+            "description": "Configures the interaction model of the ATTN pin",
+            "type": "string",
+            "pattern": "^(?:-all|-env|-files|-location|-motion|-usb|arm|auxgpio|connected|disarm|env|files|location|motion|motionchange|rearm|signal|sleep|usb|watchdog|wireless)(?:,\\s*(?:-all|-env|-files|-location|-motion|-usb|arm|auxgpio|connected|disarm|env|files|location|motion|motionchange|rearm|signal|sleep|usb|watchdog|wireless))*\\s*$"
+        },
+        "off": {
+            "description": "Disables event monitoring, and sets ATTN pin to LOW",
+            "type": "boolean"
+        },
+        "on": {
+            "description": "Enables event monitoring, and sets ATTN pin to HIGH",
+            "type": "boolean"
+        },
+        "payload": {
+            "description": "The payload to send to the Notecard during 'sleep' mode",
+            "type": "string",
+            "format": "binary"
+        },
+        "seconds": {
+            "description": "Duration in seconds for the corresponding 'mode' value",
+            "type": "integer",
+            "minimum": 0
+        },
+        "start": {
+            "description": "Request to return stored `payload` after 'sleep' mode",
+            "type": "boolean"
+        },
+        "verify": {
+            "description": "Returns the current event monitor configuration",
+            "type": "boolean"
+        }
+    },
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "mode": {
+            		    "type": "string",
+         		        "pattern": "(^watchdog$|^watchdog,|,*\\s*watchdog\\s*,|,*\\s*watchdog$)"
+            		}
+                },
+                "required": ["mode"]
+            },
+            "then": {
+                "properties": {
+                    "seconds": { "minimum": 60 }
+                },
+                "required": ["seconds"]
+            },
+            "else": {
+                "if": {
+                    "properties": {
+                        "mode": {
+                            "type": "string",
+                            "pattern": "(^sleep$|^sleep,|,*\\s*sleep\\s*,|,*\\s*sleep$)"
+                        }
+                    },
+                    "required": ["mode"]
+                },
+                "then": {
+                    "properties": {
+                        "seconds": { "minimum": 0 }
+                    },
+                  	"required": ["seconds"]
+                },
+                "else": {
+                    "not": {
+                        "required": ["seconds"]
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "mode": {
+            		    "type": "string",
+         		        "pattern": "(^files$|^files,|,*\\s*files\\s*,|,*\\s*files$)"
+            		}
+                },
+                "required": ["mode"]
+            },
+            "then": {
+                "required": ["files"]
+            },
+            "else": {
+                "not": {
+                    "required": ["files"]
+                }
+            }
+        }
+    ]
+}

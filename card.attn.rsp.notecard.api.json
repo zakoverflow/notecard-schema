@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.attn.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.attn API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "set": {
+            "description": "State of the ATTN pin",
+            "type": "boolean"
+        },
+        "files": {
+            "description": "An array of Notefile events triggering the ATTN pin",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1
+        },
+        "payload": {
+            "description": "Echoes the payload to provided to the Notecard during 'sleep' mode",
+            "type": "string",
+            "format": "binary"
+        },
+        "time": {
+            "description": "Unix epoch timestamp of the 'payload' value",
+            "type": "integer",
+            "minimum": 0
+        },
+        "off": {
+            "description": "Present when event monitoring is disabled",
+            "type": "boolean"
+        }
+    }
+}
