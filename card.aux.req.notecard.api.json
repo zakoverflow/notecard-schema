@@ -1,0 +1,66 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.aux.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.aux API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.aux"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.aux"
+            }
+        },
+        "mode": {
+            "description": "The mode to set for the AUX interface",
+            "type": "string",
+            "enum": ["off", "aux", "usb", "i2c", "gpio", "pulse", "dfu"]
+        },
+        "on": {
+            "description": "Enable the AUX interface",
+            "type": "boolean"
+        },
+        "off": {
+            "description": "Disable the AUX interface",
+            "type": "boolean"
+        },
+        "seconds": {
+            "description": "Duration in seconds for the AUX interface to remain active",
+            "type": "integer",
+            "minimum": 0
+        },
+        "delay": {
+            "description": "Delay in milliseconds between bytes when transmitting",
+            "type": "integer",
+            "minimum": 0
+        },
+        "text": {
+            "description": "Text to transmit over the AUX interface",
+            "type": "string"
+        },
+        "binary": {
+            "description": "Binary data to transmit over the AUX interface",
+            "type": "string",
+            "format": "binary"
+        },
+        "baudrate": {
+            "description": "Baud rate for serial communication",
+            "type": "integer",
+            "enum": [1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600]
+        }
+    }
+}

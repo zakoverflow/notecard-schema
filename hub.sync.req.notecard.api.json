@@ -1,0 +1,44 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/hub.sync.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the hub.sync API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "hub.sync"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "hub.sync"
+            }
+        },
+        "inbound": {
+            "description": "Whether to sync inbound data",
+            "type": "boolean"
+        },
+        "outbound": {
+            "description": "Whether to sync outbound data",
+            "type": "boolean"
+        },
+        "files": {
+            "description": "Array of files to sync",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

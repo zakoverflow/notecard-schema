@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.location.track.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.location.track API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "status": {
+            "description": "Status of the location tracking",
+            "type": "string"
+        },
+        "heartbeat": {
+            "description": "Current interval in minutes between heartbeat location updates",
+            "type": "integer",
+            "minimum": 0
+        },
+        "hours": {
+            "description": "Current duration in hours to track location",
+            "type": "number",
+            "minimum": 0
+        }
+    }
+}

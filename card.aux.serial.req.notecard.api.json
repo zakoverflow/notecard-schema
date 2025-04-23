@@ -1,0 +1,48 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.aux.serial.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.aux.serial API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.aux.serial"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.aux.serial"
+            }
+        },
+        "baudrate": {
+            "description": "Baud rate for serial communication",
+            "type": "integer",
+            "enum": [1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600]
+        },
+        "text": {
+            "description": "Text to transmit over the serial interface",
+            "type": "string"
+        },
+        "binary": {
+            "description": "Binary data to transmit over the serial interface",
+            "type": "string",
+            "format": "binary"
+        },
+        "delay": {
+            "description": "Delay in milliseconds between bytes when transmitting",
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.location.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.location API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.location"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.location"
+            }
+        },
+        "mode": {
+            "description": "Location mode to set",
+            "type": "string",
+            "enum": ["periodic", "continuous", "off", "tower", "gps", "mobile"]
+        },
+        "seconds": {
+            "description": "Interval in seconds for periodic location updates",
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/note.delete.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the note.delete API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "note.delete"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "note.delete"
+            }
+        },
+        "file": {
+            "description": "Name of the notefile to delete notes from",
+            "type": "string"
+        },
+        "note": {
+            "description": "ID of the note to delete",
+            "type": "string"
+        },
+        "notes": {
+            "description": "Array of note IDs to delete",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}
