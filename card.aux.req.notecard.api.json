@@ -26,41 +26,76 @@
             }
         },
         "mode": {
-            "description": "The mode to set for the AUX interface",
+            "description": "The AUX mode",
             "type": "string",
-            "enum": ["off", "aux", "usb", "i2c", "gpio", "pulse", "dfu"]
+            "enum": ["dfu", "gpio", "led", "monitor", "motion", "neo", "neo-monitor", "off", "track", "track-monitor", "track-neo-monitor", "-"]
         },
-        "on": {
-            "description": "Enable the AUX interface",
-            "type": "boolean"
-        },
-        "off": {
-            "description": "Disable the AUX interface",
-            "type": "boolean"
+        "usage": {
+            "description": "An ordered list of pin modes for each AUX pin when in GPIO mode",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": ["", "off", "high", "low", "input", "input-pulldown", "input-pullup", "count", "count-pulldown", "count-pullup"]
+            }
         },
         "seconds": {
-            "description": "Duration in seconds for the AUX interface to remain active",
+            "description": "When in gpio mode, if an AUX pin is configured as a count type, the count of rising edges can be broken into samples of this duration",
             "type": "integer",
             "minimum": 0
         },
-        "delay": {
-            "description": "Delay in milliseconds between bytes when transmitting",
+        "max": {
+            "description": "When in gpio mode, if an AUX pin is configured as a count type, the maximum number of samples of duration seconds",
             "type": "integer",
             "minimum": 0
         },
-        "text": {
-            "description": "Text to transmit over the AUX interface",
+        "start": {
+            "description": "When in gpio mode, if an AUX pin is configured as a count type, set to true to reset counters and start incrementing",
+            "type": "boolean"
+        },
+        "gps": {
+            "description": "Deprecated. If true, along with mode:track the Notecard supports the use of an external GPS module",
+            "type": "boolean"
+        },
+        "rate": {
+            "description": "The AUX UART baud rate for debug communication over the AUXRX and AUXTX pins",
+            "type": "integer"
+        },
+        "sync": {
+            "description": "If true, for pins set as input by usage, the Notecard will autonomously report any state changes as new notes in file",
+            "type": "boolean"
+        },
+        "file": {
+            "description": "The name of the Notefile used to report state changes when used in conjunction with sync:true",
             "type": "string"
         },
-        "binary": {
-            "description": "Binary data to transmit over the AUX interface",
-            "type": "string",
-            "format": "binary"
+        "connected": {
+            "description": "If true, defers the sync of the state change Notefile to the next sync as configured by the hub.set request",
+            "type": "boolean"
         },
-        "baudrate": {
-            "description": "Baud rate for serial communication",
+        "limit": {
+            "description": "If true, along with mode:track and gps:true the Notecard will disable concurrent modem use during GPS tracking",
+            "type": "boolean"
+        },
+        "sensitivity": {
+            "description": "When used with mode:neo-monitor or mode:track-neo-monitor, this controls the brightness of NeoPixel lights",
             "type": "integer",
-            "enum": [1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600]
+            "minimum": 1,
+            "maximum": 100
+        },
+        "ms": {
+            "description": "When in gpio mode, this argument configures a debouncing interval",
+            "type": "integer",
+            "minimum": 0
+        },
+        "count": {
+            "description": "When used with mode:neo-monitor or mode:track-neo-monitor, this controls the number of NeoPixels to use in a strip",
+            "type": "integer",
+            "enum": [1, 2, 5]
+        },
+        "offset": {
+            "description": "When used with mode:neo-monitor or mode:track-neo-monitor, this is the 1-based index in a strip of NeoPixels",
+            "type": "integer",
+            "minimum": 1
         }
     }
 }
