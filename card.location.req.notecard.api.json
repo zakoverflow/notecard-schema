@@ -24,16 +24,6 @@
                 "description": "Request for the Notecard (expects response)",
                 "const": "card.location"
             }
-        },
-        "mode": {
-            "description": "Location mode to set",
-            "type": "string",
-            "enum": ["periodic", "continuous", "off", "tower", "gps", "mobile"]
-        },
-        "seconds": {
-            "description": "Interval in seconds for periodic location updates",
-            "type": "integer",
-            "minimum": 0
         }
     }
 }

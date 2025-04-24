@@ -14,21 +14,6 @@
             "description": "Semantic version of the Notecard API",
             "type": "string",
             "const": "9.1.1"
-        },
-        "mode": {
-            "description": "Current motion detection mode",
-            "type": "string"
-        },
-        "seconds": {
-            "description": "Current interval in seconds for periodic motion detection",
-            "type": "integer",
-            "minimum": 0
-        },
-        "sensitivity": {
-            "description": "Current motion detection sensitivity (1-5)",
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 5
         }
     }
 }

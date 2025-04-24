@@ -25,10 +25,26 @@
                 "const": "card.dfu"
             }
         },
-        "mode": {
-            "description": "DFU mode to set",
+        "name": {
+            "description": "One of the supported classes of host MCU. Supported MCU classes are 'esp32', 'stm32', 'stm32-bi', '-'",
             "type": "string",
-            "enum": ["dfu", "stm32"]
+            "enum": ["esp32", "stm32", "stm32-bi", "-"]
+        },
+        "on": {
+            "description": "Set to true to enable Notecard Outboard Firmware Update",
+            "type": "boolean"
+        },
+        "off": {
+            "description": "Set to true to disable Notecard Outboard Firmware Update from occurring",
+            "type": "boolean"
+        },
+        "seconds": {
+            "description": "When used with 'off':true, disable Notecard Outboard Firmware Update operations for the specified number of seconds",
+            "type": "integer"
+        },
+        "stop": {
+            "description": "Set to true to disable the host RESET that is normally performed on the host MCU when the Notecard starts up",
+            "type": "boolean"
         }
     }
 }

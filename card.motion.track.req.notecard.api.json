@@ -26,16 +26,33 @@
             }
         },
         "start": {
-            "description": "Start motion tracking",
+            "description": "Set to true to start motion capture",
             "type": "boolean"
         },
         "stop": {
-            "description": "Stop motion tracking",
+            "description": "Set to true to stop motion capture",
             "type": "boolean"
         },
+        "minutes": {
+            "description": "The maximum period to capture Notes in the Notefile",
+            "type": "integer"
+        },
+        "count": {
+            "description": "The number of most recent motion buckets to examine",
+            "type": "integer"
+        },
+        "threshold": {
+            "description": "The number of buckets that must indicate motion in order to capture",
+            "type": "integer"
+        },
         "file": {
-            "description": "Notefile to store motion tracking data",
-            "type": "string"
+            "description": "The Notefile to use for motion capture Notes",
+            "type": "string",
+            "default": "_motion.qo"
+        },
+        "now": {
+            "description": "Set to true to trigger the immediate creation of a motion.qo event if the orientation of the Notecard changes",
+            "type": "boolean"
         }
     }
 }

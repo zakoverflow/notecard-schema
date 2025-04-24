@@ -25,26 +25,22 @@
                 "const": "card.contact"
             }
         },
-        "text": {
-            "description": "Contact information text",
+        "name": {
+            "description": "Set the name of the Notecard maintainer",
             "type": "string"
         },
         "org": {
-            "description": "Organization name",
+            "description": "Set the organization name of the Notecard maintainer",
+            "type": "string"
+        },
+        "role": {
+            "description": "Set the role of the Notecard maintainer",
             "type": "string"
         },
         "email": {
-            "description": "Contact email address",
+            "description": "Set the email address of the Notecard maintainer",
             "type": "string",
             "format": "email"
-        },
-        "phone": {
-            "description": "Contact phone number",
-            "type": "string"
-        },
-        "name": {
-            "description": "Contact name",
-            "type": "string"
         }
     }
 }

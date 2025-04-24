@@ -15,10 +15,9 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "length": {
-            "description": "Total length of binary data in the buffer",
-            "type": "integer",
-            "minimum": 0
+        "err": {
+            "description": "If present, a string describing the error that occurred during transmission",
+            "type": "string"
         }
     }
 }

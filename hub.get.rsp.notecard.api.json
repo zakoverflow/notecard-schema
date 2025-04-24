@@ -16,28 +16,44 @@
             "const": "9.1.1"
         },
         "device": {
-            "description": "Device identifier",
+            "description": "The DeviceUID for the Notecard",
             "type": "string"
         },
         "product": {
             "description": "Product identifier",
             "type": "string"
         },
-        "sn": {
-            "description": "Serial number",
+        "mode": {
+            "description": "Hub mode (periodic, continuous, minimum)",
             "type": "string"
         },
-        "mode": {
-            "description": "Hub mode",
+        "outbound": {
+            "description": "Outbound data period in seconds",
+            "type": "integer"
+        },
+        "voutbound": {
+            "description": "Voltage-variable outbound period",
+            "type": "string"
+        },
+        "inbound": {
+            "description": "Inbound data period in seconds",
+            "type": "integer"
+        },
+        "vinbound": {
+            "description": "Voltage-variable inbound period",
             "type": "string"
         },
         "host": {
             "description": "Host address",
             "type": "string"
         },
-        "port": {
-            "description": "Port number",
-            "type": "integer"
+        "sn": {
+            "description": "Serial number",
+            "type": "string"
+        },
+        "sync": {
+            "description": "Whether sync is enabled",
+            "type": "boolean"
         }
     }
 }

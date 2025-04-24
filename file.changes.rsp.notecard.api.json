@@ -15,20 +15,17 @@
             "type": "string",
             "const": "9.1.1"
         },
+        "total": {
+            "description": "Total number of files",
+            "type": "integer"
+        },
         "changes": {
-            "description": "Whether there are changes",
-            "type": "boolean"
+            "description": "Number of files that have changed",
+            "type": "integer"
         },
-        "files": {
-            "description": "Array of files that have changed",
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
-        },
-        "tracker": {
-            "description": "Tracker ID for monitoring changes",
-            "type": "string"
+        "info": {
+            "description": "Information about the changes",
+            "type": "object"
         }
     }
 }

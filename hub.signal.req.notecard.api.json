@@ -25,10 +25,9 @@
                 "const": "hub.signal"
             }
         },
-        "mode": {
-            "description": "Signal mode",
-            "type": "string",
-            "enum": ["continuous", "fast", "normal", "slow", "off"]
+        "seconds": {
+            "description": "Number of seconds to wait for a signal",
+            "type": "integer"
         }
     }
 }

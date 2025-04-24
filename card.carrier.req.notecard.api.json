@@ -25,16 +25,10 @@
                 "const": "card.carrier"
             }
         },
-        "name": {
-            "description": "Name of the carrier to use",
-            "type": "string"
-        },
-        "sims": {
-            "description": "Array of SIM identifiers to use",
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
+        "mode": {
+            "description": "The AUX_CHARGING mode. Set to 'charging' to tell the Notecard that AUX_CHARGING is connected to a Notecarrier that supports charging on AUX_CHARGING. Set to '-' or 'off' to turn off the AUX_CHARGING detection",
+            "type": "string",
+            "enum": ["charging", "-", "off"]
         }
     }
 }

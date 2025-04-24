@@ -15,24 +15,20 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "text": {
-            "description": "Contact information text",
+        "name": {
+            "description": "Name of the Notecard maintainer",
             "type": "string"
         },
         "org": {
-            "description": "Organization name",
+            "description": "Organization name of the Notecard maintainer",
+            "type": "string"
+        },
+        "role": {
+            "description": "Role of the Notecard maintainer",
             "type": "string"
         },
         "email": {
-            "description": "Contact email address",
-            "type": "string"
-        },
-        "phone": {
-            "description": "Contact phone number",
-            "type": "string"
-        },
-        "name": {
-            "description": "Contact name",
+            "description": "Email address of the Notecard maintainer",
             "type": "string"
         }
     }

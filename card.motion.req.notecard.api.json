@@ -25,19 +25,9 @@
                 "const": "card.motion"
             }
         },
-        "start": {
-            "description": "Start motion detection",
-            "type": "boolean"
-        },
-        "stop": {
-            "description": "Stop motion detection",
-            "type": "boolean"
-        },
-        "sensitivity": {
-            "description": "Motion detection sensitivity (1-5)",
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 5
+        "minutes": {
+            "description": "Amount of time to sample for buckets of accelerometer-measured movement",
+            "type": "integer"
         }
     }
 }

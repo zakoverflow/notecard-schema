@@ -24,6 +24,10 @@
                 "description": "Request for the Notecard (expects response)",
                 "const": "hub.sync.status"
             }
+        },
+        "sync": {
+            "description": "Whether to sync immediately",
+            "type": "boolean"
         }
     }
 }

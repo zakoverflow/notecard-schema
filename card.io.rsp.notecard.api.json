@@ -14,18 +14,6 @@
             "description": "Semantic version of the Notecard API",
             "type": "string",
             "const": "9.1.1"
-        },
-        "pin": {
-            "description": "Pin identifier",
-            "type": "string"
-        },
-        "mode": {
-            "description": "Current mode of the pin",
-            "type": "string"
-        },
-        "value": {
-            "description": "Current value of the pin",
-            "type": "boolean"
         }
     }
 }

@@ -29,26 +29,78 @@
             "description": "Product identifier",
             "type": "string"
         },
-        "device": {
-            "description": "Device identifier",
+        "host": {
+            "description": "Host address",
             "type": "string"
+        },
+        "mode": {
+            "description": "Hub mode (periodic, continuous, minimum, off)",
+            "type": "string",
+            "enum": ["continuous", "periodic", "minimum", "off"]
         },
         "sn": {
             "description": "Serial number",
             "type": "string"
         },
-        "mode": {
-            "description": "Hub mode",
-            "type": "string",
-            "enum": ["continuous", "periodic", "minimum", "off"]
+        "outbound": {
+            "description": "Outbound data period in seconds",
+            "type": "integer"
         },
-        "host": {
-            "description": "Host address",
+        "duration": {
+            "description": "Duration of the outbound period in seconds",
+            "type": "integer"
+        },
+        "voutbound": {
+            "description": "Voltage-variable outbound period",
             "type": "string"
         },
-        "port": {
-            "description": "Port number",
+        "inbound": {
+            "description": "Inbound data period in seconds",
             "type": "integer"
+        },
+        "vinbound": {
+            "description": "Voltage-variable inbound period",
+            "type": "string"
+        },
+        "align": {
+            "description": "Whether to align the inbound and outbound periods",
+            "type": "boolean"
+        },
+        "sync": {
+            "description": "Whether to sync immediately",
+            "type": "boolean"
+        },
+        "on": {
+            "description": "Whether to turn on the hub",
+            "type": "boolean"
+        },
+        "seconds": {
+            "description": "Number of seconds to wait before turning off",
+            "type": "integer"
+        },
+        "off": {
+            "description": "Whether to turn off the hub",
+            "type": "boolean"
+        },
+        "uperiodic": {
+            "description": "Microseconds for periodic mode",
+            "type": "integer"
+        },
+        "umin": {
+            "description": "Microseconds for minimum mode",
+            "type": "integer"
+        },
+        "uoff": {
+            "description": "Microseconds for off mode",
+            "type": "integer"
+        },
+        "details": {
+            "description": "Whether to include details in the response",
+            "type": "boolean"
+        },
+        "version": {
+            "description": "Version information",
+            "type": ["string", "object"]
         }
     }
 }

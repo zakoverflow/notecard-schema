@@ -25,13 +25,17 @@
                 "const": "card.binary.get"
             }
         },
-        "length": {
-            "description": "Length of binary data to retrieve",
+        "cobs": {
+            "description": "The size of the COBS-encoded data you are expecting to be returned (in bytes)",
+            "type": "integer"
+        },
+        "offset": {
+            "description": "Used along with length, the number of bytes to offset the binary payload from 0 when retrieving binary data from the Notecard",
             "type": "integer",
             "minimum": 0
         },
-        "offset": {
-            "description": "Offset into the binary buffer",
+        "length": {
+            "description": "Used along with offset, the number of bytes to retrieve from the binary storage area of the Notecard",
             "type": "integer",
             "minimum": 0
         }

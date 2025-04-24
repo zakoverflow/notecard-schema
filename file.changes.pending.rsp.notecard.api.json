@@ -15,14 +15,21 @@
             "type": "string",
             "const": "9.1.1"
         },
+        "total": {
+            "description": "The total of unsynced notes across all Notefiles",
+            "type": "integer"
+        },
+        "changes": {
+            "description": "The number of changes across all files",
+            "type": "integer"
+        },
         "pending": {
             "description": "Whether there are pending changes",
             "type": "boolean"
         },
-        "count": {
-            "description": "Number of pending changes",
-            "type": "integer",
-            "minimum": 0
+        "info": {
+            "description": "Information about changes for each Notefile",
+            "type": "object"
         }
     }
 }

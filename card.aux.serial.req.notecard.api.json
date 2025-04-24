@@ -25,24 +25,10 @@
                 "const": "card.aux.serial"
             }
         },
-        "baudrate": {
-            "description": "Baud rate for serial communication",
-            "type": "integer",
-            "enum": [1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600]
-        },
-        "text": {
-            "description": "Text to transmit over the serial interface",
-            "type": "string"
-        },
-        "binary": {
-            "description": "Binary data to transmit over the serial interface",
+        "mode": {
+            "description": "The AUX mode. Must be one of the following",
             "type": "string",
-            "format": "binary"
-        },
-        "delay": {
-            "description": "Delay in milliseconds between bytes when transmitting",
-            "type": "integer",
-            "minimum": 0
+            "enum": ["req", "gps", "notify", "notify,accel", "notify,signals", "notify,env", "notify,dfu"]
         }
     }
 }

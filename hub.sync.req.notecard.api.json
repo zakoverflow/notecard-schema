@@ -25,20 +25,17 @@
                 "const": "hub.sync"
             }
         },
-        "inbound": {
-            "description": "Whether to sync inbound data",
+        "allow": {
+            "description": "Whether to allow the sync to proceed",
             "type": "boolean"
         },
-        "outbound": {
+        "out": {
             "description": "Whether to sync outbound data",
             "type": "boolean"
         },
-        "files": {
-            "description": "Array of files to sync",
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
+        "in": {
+            "description": "Whether to sync inbound data",
+            "type": "boolean"
         }
     }
 }

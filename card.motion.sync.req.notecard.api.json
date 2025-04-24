@@ -26,17 +26,24 @@
             }
         },
         "start": {
-            "description": "Start motion-triggered sync",
+            "description": "Set to true to start motion-triggered syncing",
             "type": "boolean"
         },
         "stop": {
-            "description": "Stop motion-triggered sync",
+            "description": "Set to true to stop motion-triggered syncing",
             "type": "boolean"
         },
-        "delay": {
-            "description": "Delay in seconds before syncing after motion is detected",
-            "type": "integer",
-            "minimum": 0
+        "minutes": {
+            "description": "The maximum frequency at which sync will be triggered",
+            "type": "integer"
+        },
+        "count": {
+            "description": "The number of most recent motion buckets to examine",
+            "type": "integer"
+        },
+        "threshold": {
+            "description": "The number of buckets that must indicate motion in order to trigger a sync",
+            "type": "integer"
         }
     }
 }

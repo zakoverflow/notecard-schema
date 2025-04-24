@@ -25,8 +25,15 @@
                 "const": "file.changes"
             }
         },
+        "files": {
+            "description": "One or more files to obtain change information from",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
         "tracker": {
-            "description": "Tracker ID for monitoring changes",
+            "description": "ID of a change tracker to use to determine changes to Notefiles",
             "type": "string"
         }
     }

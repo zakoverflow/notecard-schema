@@ -25,18 +25,14 @@
                 "const": "card.io"
             }
         },
-        "pin": {
-            "description": "Pin identifier",
-            "type": "string"
+        "i2c": {
+            "description": "The alternate address to use for I2C communication. Pass -1 to reset to the default address",
+            "type": "integer"
         },
         "mode": {
-            "description": "Mode to set for the pin",
+            "description": "Set to '-usb' to disable the Notecard's USB port. Re-enable the USB port with 'usb' or '+usb'. Set to '+busy' for LED on when Notecard is awake, and off when asleep. Set to '-busy' to reset to default. Set to 'i2c-master-disable' to disable Notecard acting as an I2C master",
             "type": "string",
-            "enum": ["input", "output", "output-open-drain", "input-pullup", "input-pulldown"]
-        },
-        "value": {
-            "description": "Value to set for the pin (for output modes)",
-            "type": "boolean"
+            "enum": ["-usb", "usb", "+usb", "+busy", "-busy", "i2c-master-disable", "i2c-master-enable"]
         }
     }
 }

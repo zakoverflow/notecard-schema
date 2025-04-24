@@ -26,22 +26,29 @@
             }
         },
         "start": {
-            "description": "Start location tracking",
-            "type": "boolean"
-        },
-        "stop": {
-            "description": "Stop location tracking",
+            "description": "Set to true to start Notefile tracking",
             "type": "boolean"
         },
         "heartbeat": {
-            "description": "Interval in minutes between heartbeat location updates",
-            "type": "integer",
-            "minimum": 0
+            "description": "When start is true, set to true to enable tracking even when motion is not detected",
+            "type": "boolean"
         },
         "hours": {
-            "description": "Duration in hours to track location",
-            "type": "number",
-            "minimum": 0
+            "description": "If heartbeat is true, add a heartbeat entry at this hourly interval. Use a negative integer to specify a heartbeat in minutes instead of hours",
+            "type": "integer"
+        },
+        "sync": {
+            "description": "Set to true to perform an immediate sync to the Notehub each time a new Note is added",
+            "type": "boolean"
+        },
+        "stop": {
+            "description": "Set to true to stop Notefile tracking",
+            "type": "boolean"
+        },
+        "file": {
+            "description": "The name of the Notefile to store location data in",
+            "type": "string",
+            "default": "track.qo"
         }
     }
 }

@@ -22,10 +22,6 @@
         "connected": {
             "description": "Whether the Notecard is connected to the hub",
             "type": "boolean"
-        },
-        "time": {
-            "description": "Current time (Unix epoch seconds)",
-            "type": "integer"
         }
     }
 }

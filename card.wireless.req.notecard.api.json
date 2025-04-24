@@ -26,9 +26,18 @@
             }
         },
         "mode": {
-            "description": "Wireless mode to set",
+            "description": "Network scan mode",
             "type": "string",
-            "enum": ["auto", "off", "on"]
+            "enum": ["-", "auto", "m", "nb", "gprs"]
+        },
+        "apn": {
+            "description": "Access Point Name (APN) when using an external SIM",
+            "type": "string"
+        },
+        "method": {
+            "description": "Used when configuring a Notecard to failover to a different SIM",
+            "type": "string",
+            "enum": ["-", "dual-primary-secondary", "dual-secondary-primary", "primary", "secondary"]
         }
     }
 }

@@ -15,15 +15,13 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "binary": {
-            "description": "Binary data retrieved from the buffer",
-            "type": "string",
-            "format": "binary"
+        "status": {
+            "description": "The MD5 checksum of the data returned, after it has been decoded",
+            "type": "string"
         },
-        "length": {
-            "description": "Length of binary data retrieved",
-            "type": "integer",
-            "minimum": 0
+        "err": {
+            "description": "If present, a string describing the error that occurred during transmission",
+            "type": "string"
         }
     }
 }

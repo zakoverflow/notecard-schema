@@ -15,9 +15,20 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "mode": {
-            "description": "Current signal mode",
-            "type": "string"
+        "body": {
+            "description": "Signal information",
+            "type": "object"
+        },
+        "connected": {
+            "description": "Whether the Notecard is connected to the network",
+            "type": "boolean"
+        },
+        "signals": {
+            "description": "Array of signal information",
+            "type": "array",
+            "items": {
+                "type": "object"
+            }
         }
     }
 }

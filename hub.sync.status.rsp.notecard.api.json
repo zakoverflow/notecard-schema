@@ -19,15 +19,37 @@
             "description": "Status of the sync operation",
             "type": "string"
         },
+        "mode": {
+            "description": "Current sync mode",
+            "type": "string"
+        },
+        "time": {
+            "description": "Time of the last sync",
+            "type": "integer"
+        },
+        "alert": {
+            "description": "Alert message",
+            "type": "string"
+        },
         "sync": {
             "description": "Whether a sync is in progress",
             "type": "boolean"
         },
-        "progress": {
-            "description": "Sync progress percentage",
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 100
+        "completed": {
+            "description": "Whether the sync has completed",
+            "type": "boolean"
+        },
+        "requested": {
+            "description": "Whether a sync has been requested",
+            "type": "boolean"
+        },
+        "seconds": {
+            "description": "Number of seconds since the last sync",
+            "type": "integer"
+        },
+        "scan": {
+            "description": "Whether a scan is in progress",
+            "type": "boolean"
         }
     }
 }

@@ -16,46 +16,40 @@
             "const": "9.1.1"
         },
         "status": {
-            "description": "Status of the Notecard",
+            "description": "General status information",
             "type": "string"
         },
         "usb": {
-            "description": "USB connection status",
+            "description": "Is the Notecard is being powered by USB",
             "type": "boolean"
         },
         "storage": {
-            "description": "Storage status information",
-            "type": "object",
-            "properties": {
-                "available": {
-                    "description": "Available storage in bytes",
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "total": {
-                    "description": "Total storage in bytes",
-                    "type": "integer",
-                    "minimum": 0
-                }
-            }
+            "description": "The percentage of storage in use on the Notecard",
+            "type": "integer"
         },
-        "version": {
-            "description": "Firmware version information",
-            "type": "object",
-            "properties": {
-                "fw": {
-                    "description": "Firmware version",
-                    "type": "string"
-                },
-                "org": {
-                    "description": "Organization",
-                    "type": "string"
-                },
-                "api": {
-                    "description": "API version",
-                    "type": "string"
-                }
-            }
+        "time": {
+            "description": "The UNIX Epoch Time of approximately when the Notecard was first powered up",
+            "type": "integer"
+        },
+        "connected": {
+            "description": "Whether the Notecard is connected to the Notehub",
+            "type": "boolean"
+        },
+        "cell": {
+            "description": "Whether the Notecard has a cellular connection",
+            "type": "boolean"
+        },
+        "sync": {
+            "description": "Whether the Notecard is currently syncing with the Notehub",
+            "type": "boolean"
+        },
+        "inbound": {
+            "description": "Number of inbound Notes waiting to be retrieved by the host",
+            "type": "integer"
+        },
+        "outbound": {
+            "description": "Number of outbound Notes waiting to be synced to the Notehub",
+            "type": "integer"
         }
     }
 }

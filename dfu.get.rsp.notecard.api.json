@@ -15,24 +15,9 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "status": {
-            "description": "Status of the firmware retrieval",
+        "payload": {
+            "description": "Binary payload data encoded as base64",
             "type": "string"
-        },
-        "name": {
-            "description": "Name of the firmware file",
-            "type": "string"
-        },
-        "size": {
-            "description": "Size of the firmware file in bytes",
-            "type": "integer",
-            "minimum": 0
-        },
-        "progress": {
-            "description": "Download progress percentage",
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 100
         }
     }
 }

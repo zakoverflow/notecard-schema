@@ -24,10 +24,6 @@
                 "description": "Request for the Notecard (expects response)",
                 "const": "card.time"
             }
-        },
-        "time": {
-            "description": "Time to set (Unix epoch seconds)",
-            "type": "integer"
         }
     }
 }

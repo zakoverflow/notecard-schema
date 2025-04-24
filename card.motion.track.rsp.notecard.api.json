@@ -14,14 +14,6 @@
             "description": "Semantic version of the Notecard API",
             "type": "string",
             "const": "9.1.1"
-        },
-        "status": {
-            "description": "Status of motion tracking",
-            "type": "string"
-        },
-        "file": {
-            "description": "Notefile storing motion tracking data",
-            "type": "string"
         }
     }
 }

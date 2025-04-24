@@ -14,10 +14,6 @@
             "description": "Semantic version of the Notecard API",
             "type": "string",
             "const": "9.1.1"
-        },
-        "mode": {
-            "description": "Current DFU mode",
-            "type": "string"
         }
     }
 }

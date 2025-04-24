@@ -15,12 +15,44 @@
             "type": "string",
             "const": "9.1.1"
         },
+        "mode": {
+            "description": "The current voltage threshold mode",
+            "type": "string"
+        },
+        "usb": {
+            "description": "Whether the Notecard is being powered by USB",
+            "type": "boolean"
+        },
         "value": {
-            "description": "Voltage value in volts",
+            "description": "Current voltage in volts",
             "type": "number"
         },
         "vref": {
             "description": "Reference voltage in volts",
+            "type": "number"
+        },
+        "vmax": {
+            "description": "Maximum voltage threshold",
+            "type": "number"
+        },
+        "vmin": {
+            "description": "Minimum voltage threshold",
+            "type": "number"
+        },
+        "vhigh": {
+            "description": "High voltage threshold",
+            "type": "number"
+        },
+        "vnormal": {
+            "description": "Normal voltage threshold",
+            "type": "number"
+        },
+        "vlow": {
+            "description": "Low voltage threshold",
+            "type": "number"
+        },
+        "vdead": {
+            "description": "Dead voltage threshold",
             "type": "number"
         }
     }

@@ -25,12 +25,9 @@
                 "const": "file.stats"
             }
         },
-        "files": {
-            "description": "Array of files to get stats for",
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
+        "file": {
+            "description": "Optional file to get stats for",
+            "type": "string"
         }
     }
 }

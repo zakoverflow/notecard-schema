@@ -15,15 +15,29 @@
             "type": "string",
             "const": "9.1.1"
         },
+        "count": {
+            "description": "The number of accelerometer motion events since the last card.motion request was made",
+            "type": "integer"
+        },
         "status": {
-            "description": "Status of motion detection",
+            "description": "The current status of the Notecard accelerometer",
             "type": "string"
         },
-        "sensitivity": {
-            "description": "Current motion detection sensitivity (1-5)",
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 5
+        "alert": {
+            "description": "If true, the Notecard's accelerometer detected a free-fall since the last request to card.motion",
+            "type": "boolean"
+        },
+        "motion": {
+            "description": "Time of the last accelerometer motion event",
+            "type": "integer"
+        },
+        "seconds": {
+            "description": "Number of seconds since the last motion event",
+            "type": "integer"
+        },
+        "movements": {
+            "description": "String with motion counts in each bucket",
+            "type": "string"
         }
     }
 }

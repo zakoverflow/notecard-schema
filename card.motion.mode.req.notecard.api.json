@@ -25,21 +25,21 @@
                 "const": "card.motion.mode"
             }
         },
-        "mode": {
-            "description": "Motion detection mode to set",
-            "type": "string",
-            "enum": ["continuous", "periodic", "off"]
+        "start": {
+            "description": "Set to true to enable the Notecard accelerometer and start motion tracking",
+            "type": "boolean"
+        },
+        "stop": {
+            "description": "Set to true to disable the Notecard accelerometer and stop motion tracking",
+            "type": "boolean"
         },
         "seconds": {
-            "description": "Interval in seconds for periodic motion detection",
-            "type": "integer",
-            "minimum": 0
+            "description": "Period for each bucket of movements to be accumulated when minutes is used with card.motion",
+            "type": "integer"
         },
         "sensitivity": {
-            "description": "Motion detection sensitivity (1-5)",
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 5
+            "description": "Used to set the accelerometer sample rate",
+            "type": "integer"
         }
     }
 }

@@ -15,16 +15,13 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "name": {
-            "description": "Name of the current carrier",
+        "mode": {
+            "description": "The current AUX_CHARGING mode, or off if not set",
             "type": "string"
         },
-        "sims": {
-            "description": "Array of SIM identifiers in use",
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
+        "charging": {
+            "description": "Will display true when in AUX_CHARGING 'charging' mode",
+            "type": "boolean"
         }
     }
 }

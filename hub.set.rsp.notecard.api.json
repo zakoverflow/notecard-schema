@@ -15,21 +15,9 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "product": {
-            "description": "Product identifier",
-            "type": "string"
-        },
-        "device": {
-            "description": "Device identifier",
-            "type": "string"
-        },
-        "sn": {
-            "description": "Serial number",
-            "type": "string"
-        },
-        "mode": {
-            "description": "Hub mode",
-            "type": "string"
+        "result": {
+            "description": "Empty object returned on success",
+            "type": "object"
         }
     }
 }

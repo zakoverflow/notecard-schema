@@ -32,6 +32,10 @@
         "alert": {
             "description": "Whether this is an alert message",
             "type": "boolean"
+        },
+        "sync": {
+            "description": "Whether to sync this log message immediately",
+            "type": "boolean"
         }
     }
 }

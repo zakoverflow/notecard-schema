@@ -14,20 +14,6 @@
             "description": "Semantic version of the Notecard API",
             "type": "string",
             "const": "9.1.1"
-        },
-        "text": {
-            "description": "Text received over the serial interface",
-            "type": "string"
-        },
-        "binary": {
-            "description": "Binary data received over the serial interface",
-            "type": "string",
-            "format": "binary"
-        },
-        "count": {
-            "description": "Number of bytes received",
-            "type": "integer",
-            "minimum": 0
         }
     }
 }

@@ -15,13 +15,17 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "value": {
-            "description": "Temperature value in degrees Celsius",
+        "temperature": {
+            "description": "Temperature in degrees C",
             "type": "number"
         },
-        "calibrated": {
-            "description": "Whether the temperature reading is calibrated",
-            "type": "boolean"
+        "humidity": {
+            "description": "Relative humidity percentage (when using BME280 or ENS210 sensor)",
+            "type": "number"
+        },
+        "pressure": {
+            "description": "Barometric pressure in hPa (when using BME280 or ENS210 sensor)",
+            "type": "number"
         }
     }
 }

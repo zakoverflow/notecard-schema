@@ -15,19 +15,29 @@
             "type": "string",
             "const": "9.1.1"
         },
+        "mode": {
+            "description": "Current DFU mode",
+            "type": "string"
+        },
         "status": {
             "description": "Status of the DFU process",
             "type": "string"
         },
-        "name": {
-            "description": "Name of the firmware file",
-            "type": "string"
+        "on": {
+            "description": "Whether firmware downloads from Notehub are allowed",
+            "type": "boolean"
         },
-        "progress": {
-            "description": "DFU progress percentage",
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 100
+        "off": {
+            "description": "Whether firmware downloads from Notehub are disabled",
+            "type": "boolean"
+        },
+        "pending": {
+            "description": "Whether a firmware update is pending",
+            "type": "boolean"
+        },
+        "body": {
+            "description": "Additional information about the DFU status",
+            "type": "object"
         }
     }
 }

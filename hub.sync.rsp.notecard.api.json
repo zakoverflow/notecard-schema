@@ -15,13 +15,9 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "status": {
-            "description": "Status of the sync operation",
-            "type": "string"
-        },
-        "sync": {
-            "description": "Whether the sync was successful",
-            "type": "boolean"
+        "result": {
+            "description": "Empty object returned on success",
+            "type": "object"
         }
     }
 }

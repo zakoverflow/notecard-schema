@@ -24,6 +24,23 @@
                 "description": "Request for the Notecard (expects response)",
                 "const": "card.voltage"
             }
+        },
+        "hours": {
+            "description": "The number of hours to analyze, up to 720 (30 days)",
+            "type": "integer"
+        },
+        "mode": {
+            "description": "Used to set voltage thresholds based on how the Notecard will be powered",
+            "type": "string",
+            "enum": ["default", "lipo", "li", "alkaline", "tad", "lic"]
+        },
+        "vmax": {
+            "description": "Maximum voltage threshold",
+            "type": "number"
+        },
+        "vmin": {
+            "description": "Minimum voltage threshold",
+            "type": "number"
         }
     }
 }
