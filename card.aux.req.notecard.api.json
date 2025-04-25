@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.aux.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.aux API",
+    "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.aux.req.notecard.api.json",
+    "title": "card.aux Request Application Programming Interface (API) Schema",
+    "description": "Configure various uses of the general-purpose I/O (GPIO) pins AUX1-AUX4 on the Notecard edge connector for tracking applications and simple GPIO sensing and counting tasks.",
     "type": "object",
     "properties": {
         "manifestVersion": {
@@ -58,7 +58,8 @@
         },
         "rate": {
             "description": "The AUX UART baud rate for debug communication over the AUXRX and AUXTX pins",
-            "type": "integer"
+            "enum": [300, 600, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600],
+            "default": 115200
         },
         "sync": {
             "description": "If true, for pins set as input by usage, the Notecard will autonomously report any state changes as new notes in file",

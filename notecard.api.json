@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/notecard.api.json",
+    "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/notecard.api.json",
     "title": "Notecard Application Programming Interface (API) Schema",
     "description": "JSON description of the Notecard API",
     "type": "object",
@@ -16,9 +16,9 @@
             "const": "9.1.1"
         },
         "oneOf": {
-            "$ref": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.card.attn.req.notecard.api.json",
-            "$ref": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.restart.req.notecard.api.json",
-            "$ref": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.version.req.notecard.api.json"
+            "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.card.attn.req.notecard.api.json",
+            "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.restart.req.notecard.api.json",
+            "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.version.req.notecard.api.json"
         }
     }
 }

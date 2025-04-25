@@ -1,8 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.aux.rsp.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.aux API",
+    "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.aux.rsp.notecard.api.json",
+    "title": "card.aux Response Notecard Application Programming Interface (API) Schema",
     "type": "object",
     "properties": {
         "manifestVersion": {

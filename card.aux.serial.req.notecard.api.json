@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.aux.serial.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.aux.serial API",
+    "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.aux.serial.req.notecard.api.json",
+    "title": "card.aux.serial Request Application Programming Interface (API) Schema",
+    "description": "Configure various uses of the AUXTX and AUXRX pins on the Notecard's edge connector.",
     "type": "object",
     "properties": {
         "manifestVersion": {

@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.attn.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.attn API",
+    "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.attn.req.notecard.api.json",
+    "title": "card.attn Request Application Programming Interface (API) Schema",
+    "description": "Configure hardware notification from the Notecard to MCU host. Note: Requires a connection between the notecard ATTN pin and a GPIO pin on the host MCU.",
     "type": "object",
     "properties": {
         "manifestVersion": {

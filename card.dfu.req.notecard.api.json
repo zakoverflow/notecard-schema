@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.dfu.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.dfu API",
+    "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.dfu.req.notecard.api.json",
+    "title": "card.dfu Request Application Programming Interface (API) Schema",
+    "description": "Used to configure a Notecard for Notecard Outboard Firmware Update.",
     "type": "object",
     "properties": {
         "manifestVersion": {

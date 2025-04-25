@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.contact.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.contact API",
+    "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.contact.req.notecard.api.json",
+    "title": "card.contact Request Application Programming Interface (API) Schema",
+    "description": "Used to set or retrieve information about the Notecard maintainer. Once set, this information is synced to Notehub.",
     "type": "object",
     "properties": {
         "manifestVersion": {
