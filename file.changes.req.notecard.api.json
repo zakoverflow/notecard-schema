@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "file.changes"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "file.changes"
-            }
-        },
         "files": {
             "description": "One or more files to obtain change information from",
             "type": "array",
@@ -35,6 +25,14 @@
         "tracker": {
             "description": "ID of a change tracker to use to determine changes to Notefiles",
             "type": "string"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "file.changes"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "file.changes"
         }
     },
     "oneOf": [

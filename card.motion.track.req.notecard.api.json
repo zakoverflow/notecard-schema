@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.motion.track"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.motion.track"
-            }
-        },
         "start": {
             "description": "Set to true to start motion capture",
             "type": "boolean"
@@ -53,6 +43,14 @@
         "now": {
             "description": "Set to true to trigger the immediate creation of a motion.qo event if the orientation of the Notecard changes",
             "type": "boolean"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.motion.track"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.motion.track"
         }
     },
     "oneOf": [

@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.attn"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.attn"
-            }
-        },
         "files": {
             "description": "An array of Notefile names to monitor for changes",
             "type": "array",
@@ -64,11 +54,21 @@
         "verify": {
             "description": "Returns the current event monitor configuration",
             "type": "boolean"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.attn"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.attn"
         }
     },
     "oneOf": [
         {
-            "required": ["req"],
+            "required": [
+                "req"
+            ],
             "properties": {
                 "req": {
                     "const": "card.attn"
@@ -76,7 +76,9 @@
             }
         },
         {
-            "required": ["cmd"],
+            "required": [
+                "cmd"
+            ],
             "properties": {
                 "cmd": {
                     "const": "card.attn"
@@ -94,7 +96,9 @@
                         "pattern": "(^watchdog$|^watchdog,|,*\\s*watchdog\\s*,|,*\\s*watchdog$)"
                     }
                 },
-                "required": ["mode"]
+                "required": [
+                    "mode"
+                ]
             },
             "then": {
                 "properties": {
@@ -102,7 +106,9 @@
                         "minimum": 60
                     }
                 },
-                "required": ["seconds"]
+                "required": [
+                    "seconds"
+                ]
             },
             "else": {
                 "if": {
@@ -112,7 +118,9 @@
                             "pattern": "(^sleep$|^sleep,|,*\\s*sleep\\s*,|,*\\s*sleep$)"
                         }
                     },
-                    "required": ["mode"]
+                    "required": [
+                        "mode"
+                    ]
                 },
                 "then": {
                     "properties": {
@@ -120,11 +128,15 @@
                             "minimum": 0
                         }
                     },
-                    "required": ["seconds"]
+                    "required": [
+                        "seconds"
+                    ]
                 },
                 "else": {
                     "not": {
-                        "required": ["seconds"]
+                        "required": [
+                            "seconds"
+                        ]
                     }
                 }
             }
@@ -137,14 +149,20 @@
                         "pattern": "(^files$|^files,|,*\\s*files\\s*,|,*\\s*files$)"
                     }
                 },
-                "required": ["mode"]
+                "required": [
+                    "mode"
+                ]
             },
             "then": {
-                "required": ["files"]
+                "required": [
+                    "files"
+                ]
             },
             "else": {
                 "not": {
-                    "required": ["files"]
+                    "required": [
+                        "files"
+                    ]
                 }
             }
         }

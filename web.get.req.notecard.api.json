@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "web.get"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "web.get"
-            }
-        },
         "route": {
             "description": "URL route for the GET request",
             "type": "string"
@@ -32,6 +22,14 @@
         "headers": {
             "description": "HTTP headers for the request",
             "type": "object"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "web.get"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "web.get"
         }
     },
     "oneOf": [

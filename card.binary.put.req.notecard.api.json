@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.binary.put"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.binary.put"
-            }
-        },
         "offset": {
             "description": "The number of bytes to offset the binary payload from 0 when appending the binary data to the binary storage area of the Notecard",
             "type": "integer",
@@ -37,6 +27,14 @@
         "status": {
             "description": "The MD5 checksum of the data, before it has been encoded",
             "type": "string"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.binary.put"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.binary.put"
         }
     },
     "oneOf": [

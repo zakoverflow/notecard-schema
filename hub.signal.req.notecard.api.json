@@ -15,19 +15,17 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "hub.signal"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "hub.signal"
-            }
-        },
         "seconds": {
             "description": "Number of seconds to wait for a signal",
             "type": "integer"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "hub.signal"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "hub.signal"
         }
     },
     "oneOf": [

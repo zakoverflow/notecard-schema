@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "note.get"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "note.get"
-            }
-        },
         "file": {
             "description": "Name of the notefile to get the note from",
             "type": "string"
@@ -36,6 +26,14 @@
         "delete": {
             "description": "Whether to delete the note after getting it",
             "type": "boolean"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "note.get"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "note.get"
         }
     },
     "oneOf": [

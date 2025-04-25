@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.carrier"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.carrier"
-            }
-        },
         "mode": {
             "description": "The AUX_CHARGING mode. Set to 'charging' to tell the Notecard that AUX_CHARGING is connected to a Notecarrier that supports charging on AUX_CHARGING. Set to '-' or 'off' to turn off the AUX_CHARGING detection",
             "type": "string",
@@ -33,6 +23,14 @@
                 "-",
                 "off"
             ]
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.carrier"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.carrier"
         }
     },
     "oneOf": [

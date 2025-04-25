@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.temp"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.temp"
-            }
-        },
         "minutes": {
             "description": "If specified, creates a templated _temp.qo file that gathers Notecard temperature value at the specified minutes interval",
             "type": "integer"
@@ -40,6 +30,14 @@
         "sync": {
             "description": "If set to true, the Notecard will immediately sync any pending _temp.qo Notes created with the minutes parameter",
             "type": "boolean"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.temp"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.temp"
         }
     },
     "oneOf": [

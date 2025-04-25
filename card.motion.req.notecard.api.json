@@ -15,19 +15,17 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.motion"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.motion"
-            }
-        },
         "minutes": {
             "description": "Amount of time to sample for buckets of accelerometer-measured movement",
             "type": "integer"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.motion"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.motion"
         }
     },
     "oneOf": [

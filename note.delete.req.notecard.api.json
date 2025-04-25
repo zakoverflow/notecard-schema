@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "note.delete"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "note.delete"
-            }
-        },
         "file": {
             "description": "Name of the notefile to delete notes from",
             "type": "string"
@@ -39,6 +29,14 @@
             "items": {
                 "type": "string"
             }
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "note.delete"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "note.delete"
         }
     },
     "oneOf": [

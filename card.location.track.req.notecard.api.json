@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.location.track"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.location.track"
-            }
-        },
         "start": {
             "description": "Set to true to start Notefile tracking",
             "type": "boolean"
@@ -49,6 +39,14 @@
             "description": "The name of the Notefile to store location data in",
             "type": "string",
             "default": "track.qo"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.location.track"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.location.track"
         }
     },
     "oneOf": [

@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "var.set"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "var.set"
-            }
-        },
         "name": {
             "description": "Name of the variable to set",
             "type": "string"
@@ -32,6 +22,14 @@
         "text": {
             "description": "Value to set for the variable",
             "type": "string"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "var.set"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "var.set"
         }
     },
     "oneOf": [

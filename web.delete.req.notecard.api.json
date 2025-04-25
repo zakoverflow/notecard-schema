@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "web.delete"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "web.delete"
-            }
-        },
         "route": {
             "description": "URL route for the DELETE request",
             "type": "string"
@@ -32,6 +22,14 @@
         "headers": {
             "description": "HTTP headers for the request",
             "type": "object"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "web.delete"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "web.delete"
         }
     },
     "oneOf": [

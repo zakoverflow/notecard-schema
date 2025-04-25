@@ -15,19 +15,17 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "var.get"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "var.get"
-            }
-        },
         "name": {
             "description": "Name of the variable to get",
             "type": "string"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "var.get"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "var.get"
         }
     },
     "oneOf": [

@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "hub.log"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "hub.log"
-            }
-        },
         "text": {
             "description": "Text to log",
             "type": "string"
@@ -36,6 +26,14 @@
         "sync": {
             "description": "Whether to sync this log message immediately",
             "type": "boolean"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "hub.log"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "hub.log"
         }
     },
     "oneOf": [

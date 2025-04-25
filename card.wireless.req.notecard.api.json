@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.wireless"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.wireless"
-            }
-        },
         "mode": {
             "description": "Network scan mode",
             "type": "string",
@@ -50,6 +40,14 @@
                 "primary",
                 "secondary"
             ]
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.wireless"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.wireless"
         }
     },
     "oneOf": [

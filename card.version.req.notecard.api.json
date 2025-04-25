@@ -15,20 +15,18 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.version"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.version"
-            }
-        },
         "api": {
             "description": "Host expected major version of the Notecard API",
             "type": "integer",
             "deprecated": true
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.version"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.version"
         }
     },
     "oneOf": [
