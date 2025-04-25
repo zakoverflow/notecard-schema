@@ -25,5 +25,28 @@
                 "const": "card.restart"
             }
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.restart"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.restart"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

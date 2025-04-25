@@ -54,5 +54,28 @@
             "description": "Set to true to trigger the immediate creation of a motion.qo event if the orientation of the Notecard changes",
             "type": "boolean"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.motion.track"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.motion.track"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

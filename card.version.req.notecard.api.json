@@ -30,5 +30,28 @@
             "type": "integer",
             "deprecated": true
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.version"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.version"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

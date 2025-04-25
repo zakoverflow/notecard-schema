@@ -33,5 +33,28 @@
             "description": "The offset to use before performing a read of firmware data",
             "type": "integer"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "dfu.get"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "dfu.get"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

@@ -51,5 +51,28 @@
             "description": "Set to true to disable the host RESET that is normally performed on the host MCU when the Notecard starts up",
             "type": "boolean"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.dfu"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.dfu"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

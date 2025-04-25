@@ -39,5 +39,28 @@
             "type": "integer",
             "minimum": 0
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.binary.get"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.binary.get"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

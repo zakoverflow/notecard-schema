@@ -42,5 +42,28 @@
             "type": "string",
             "format": "email"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.contact"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.contact"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

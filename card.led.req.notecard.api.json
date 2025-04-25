@@ -48,5 +48,28 @@
             "description": "Set to true to turn the specified LED or NeoPixel off",
             "type": "boolean"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.led"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.led"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

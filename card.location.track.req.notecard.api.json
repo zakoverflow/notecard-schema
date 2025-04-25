@@ -50,5 +50,28 @@
             "type": "string",
             "default": "track.qo"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.location.track"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.location.track"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

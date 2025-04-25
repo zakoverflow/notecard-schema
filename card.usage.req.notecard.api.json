@@ -42,5 +42,28 @@
             "description": "When mode is hourly, daily, or monthly, this is the offset from the current period",
             "type": "integer"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.usage"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.usage"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

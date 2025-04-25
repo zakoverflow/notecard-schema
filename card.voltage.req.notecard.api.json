@@ -49,5 +49,28 @@
             "description": "Minimum voltage threshold",
             "type": "number"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.voltage"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.voltage"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

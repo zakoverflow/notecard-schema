@@ -25,5 +25,28 @@
                 "const": "ntn.status"
             }
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "ntn.status"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "ntn.status"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

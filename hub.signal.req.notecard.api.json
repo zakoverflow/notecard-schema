@@ -29,5 +29,28 @@
             "description": "Number of seconds to wait for a signal",
             "type": "integer"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "hub.signal"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "hub.signal"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

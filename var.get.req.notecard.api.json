@@ -29,5 +29,28 @@
             "description": "Name of the variable to get",
             "type": "string"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "var.get"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "var.get"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

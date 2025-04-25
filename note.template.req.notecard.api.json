@@ -37,5 +37,28 @@
             "description": "Template for the note body",
             "type": "object"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "note.template"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "note.template"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

@@ -110,5 +110,28 @@
                 "object"
             ]
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "hub.set"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "hub.set"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

@@ -40,5 +40,28 @@
                 "type": "string"
             }
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "note.delete"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "note.delete"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

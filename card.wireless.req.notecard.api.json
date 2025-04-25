@@ -51,5 +51,28 @@
                 "secondary"
             ]
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.wireless"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.wireless"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

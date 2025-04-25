@@ -25,5 +25,28 @@
                 "const": "file.changes.pending"
             }
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "file.changes.pending"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "file.changes.pending"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

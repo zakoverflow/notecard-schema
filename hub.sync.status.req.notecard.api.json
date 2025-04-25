@@ -29,5 +29,28 @@
             "description": "Whether to sync immediately",
             "type": "boolean"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "hub.sync.status"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "hub.sync.status"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

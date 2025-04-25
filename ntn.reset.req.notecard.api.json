@@ -25,5 +25,28 @@
                 "const": "ntn.reset"
             }
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "ntn.reset"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "ntn.reset"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

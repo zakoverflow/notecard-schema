@@ -36,5 +36,28 @@
             "description": "ID of a change tracker to use to determine changes to Notefiles",
             "type": "string"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "file.changes"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "file.changes"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

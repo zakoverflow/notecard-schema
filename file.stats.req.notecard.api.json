@@ -29,5 +29,28 @@
             "description": "Optional file to get stats for",
             "type": "string"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "file.stats"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "file.stats"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

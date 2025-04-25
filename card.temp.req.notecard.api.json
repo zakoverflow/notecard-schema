@@ -41,5 +41,28 @@
             "description": "If set to true, the Notecard will immediately sync any pending _temp.qo Notes created with the minutes parameter",
             "type": "boolean"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.temp"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.temp"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }
