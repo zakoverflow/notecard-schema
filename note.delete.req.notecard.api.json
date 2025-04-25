@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/note.delete.req.notecard.api.json",
     "title": "note.delete Request Application Programming Interface (API) Schema",
-    "description": "Deletes a Note from a DB Notefile by its Note ID. To delete\nNotes from a .qi Notefile, use note.get or note.changes with\ndelete:true.",
+    "description": "Deletes a Note from a DB Notefile by its Note ID. To delete Notes from a .qi Notefile, use note.get or note.changes with delete:true.",
     "type": "object",
     "properties": {
         "manifestVersion": {

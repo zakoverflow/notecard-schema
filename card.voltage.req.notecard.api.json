@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.voltage.req.notecard.api.json",
     "title": "card.voltage Request Application Programming Interface (API) Schema",
-    "description": "Provides the current V+ voltage level on the Notecard, and provides\ninformation about historical voltage trends. When used with the mode\nargument, configures voltage thresholds based on how the device\nis powered.",
+    "description": "Provides the current V+ voltage level on the Notecard, and provides information about historical voltage trends. When used with the mode argument, configures voltage thresholds based on how the device is powered.",
     "type": "object",
     "properties": {
         "manifestVersion": {

@@ -100,7 +100,7 @@ for filename in os.listdir('.'):
     
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)
-        f.write('\n')
+        f.write(' ')
     
     print(f"Updated {filename}")
 

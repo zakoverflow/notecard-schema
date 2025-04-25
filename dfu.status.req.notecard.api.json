@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/dfu.status.req.notecard.api.json",
     "title": "dfu.status Request Application Programming Interface (API) Schema",
-    "description": "Gets and sets the background download status of MCU host or Notecard firmware\nupdates.",
+    "description": "Gets and sets the background download status of MCU host or Notecard firmware updates.",
     "type": "object",
     "properties": {
         "manifestVersion": {

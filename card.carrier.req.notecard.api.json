@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.carrier.req.notecard.api.json",
     "title": "card.carrier Request Application Programming Interface (API) Schema",
-    "description": "Uses the AUX_CHARGING pin on the Notecard edge connector to notify the\nNotecard that the pin is connected to a Notecarrier that supports charging,\nusing open-drain.",
+    "description": "Uses the AUX_CHARGING pin on the Notecard edge connector to notify the Notecard that the pin is connected to a Notecarrier that supports charging, using open-drain.",
     "type": "object",
     "properties": {
         "manifestVersion": {

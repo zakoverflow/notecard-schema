@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.temp.req.notecard.api.json",
     "title": "card.temp Request Application Programming Interface (API) Schema",
-    "description": "Get the current temperature from the Notecard's onboard calibrated temperature\nsensor.",
+    "description": "Get the current temperature from the Notecard's onboard calibrated temperature sensor.",
     "type": "object",
     "properties": {
         "manifestVersion": {

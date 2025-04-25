@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.aux.req.notecard.api.json",
     "title": "card.aux Request Application Programming Interface (API) Schema",
-    "description": "Configure various uses of the general-purpose I/O (GPIO) pins AUX1-AUX4 on\nthe Notecard edge connector for tracking applications and simple GPIO sensing\nand counting tasks.",
+    "description": "Configure various uses of the general-purpose I/O (GPIO) pins AUX1-AUX4 on the Notecard edge connector for tracking applications and simple GPIO sensing and counting tasks.",
     "type": "object",
     "properties": {
         "manifestVersion": {

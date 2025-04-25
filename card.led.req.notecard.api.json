@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.led.req.notecard.api.json",
     "title": "card.led Request Application Programming Interface (API) Schema",
-    "description": "Used along with the\ncard.aux API to\nturn connected LEDs on/off (not supported by Notecard LoRa), or to manage a\nsingle connected NeoPixel.",
+    "description": "Used along with the card.aux API to turn connected LEDs on/off (not supported by Notecard LoRa), or to manage a single connected NeoPixel.",
     "type": "object",
     "properties": {
         "manifestVersion": {

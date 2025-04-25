@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.binary.req.notecard.api.json",
     "title": "card.binary Request Application Programming Interface (API) Schema",
-    "description": "View the status of the binary storage area of the Notecard and optionally clear\nany data and related card.binary variables.",
+    "description": "View the status of the binary storage area of the Notecard and optionally clear any data and related card.binary variables.",
     "type": "object",
     "properties": {
         "manifestVersion": {

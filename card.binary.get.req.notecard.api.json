@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.binary.get.req.notecard.api.json",
     "title": "card.binary.get Request Application Programming Interface (API) Schema",
-    "description": "Returns binary data stored in the binary storage area of the Notecard. The\nresponse to this API command first returns the JSON-formatted\nresponse object, then the binary data.",
+    "description": "Returns binary data stored in the binary storage area of the Notecard. The response to this API command first returns the JSON-formatted response object, then the binary data.",
     "type": "object",
     "properties": {
         "manifestVersion": {

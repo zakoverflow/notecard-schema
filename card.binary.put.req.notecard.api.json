@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.binary.put.req.notecard.api.json",
     "title": "card.binary.put Request Application Programming Interface (API) Schema",
-    "description": "Adds binary data to the binary storage area of the Notecard. The Notecard expects\nto receive binary data immediately following the usage of this API command.",
+    "description": "Adds binary data to the binary storage area of the Notecard. The Notecard expects to receive binary data immediately following the usage of this API command.",
     "type": "object",
     "properties": {
         "manifestVersion": {
