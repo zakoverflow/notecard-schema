@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/ntn.gps.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
+    "title": "ntn.gps Request Application Programming Interface (API) Schema",
     "description": "JSON description of the ntn.gps API",
     "type": "object",
     "properties": {
@@ -28,7 +28,11 @@
         "mode": {
             "description": "GPS mode",
             "type": "string",
-            "enum": ["continuous", "periodic", "off"]
+            "enum": [
+                "continuous",
+                "periodic",
+                "off"
+            ]
         }
     }
 }

@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/hub.sync.status.rsp.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
+    "title": "hub.sync.status Response Application Programming Interface (API) Schema",
     "type": "object",
     "properties": {
         "manifestVersion": {

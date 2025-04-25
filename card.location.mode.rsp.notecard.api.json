@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.location.mode.rsp.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
+    "title": "card.location.mode Response Application Programming Interface (API) Schema",
     "type": "object",
     "properties": {
         "manifestVersion": {
@@ -17,7 +17,12 @@
         "mode": {
             "description": "The GPS/GNSS connection mode. Will be continuous, periodic, or off",
             "type": "string",
-            "enum": ["continuous", "periodic", "off", "fixed"]
+            "enum": [
+                "continuous",
+                "periodic",
+                "off",
+                "fixed"
+            ]
         },
         "seconds": {
             "description": "When in periodic mode, location will be sampled at this interval, if the Notecard detects motion",

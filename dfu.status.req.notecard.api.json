@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/dfu.status.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
+    "title": "dfu.status Request Application Programming Interface (API) Schema",
     "description": "JSON description of the dfu.status API",
     "type": "object",
     "properties": {
@@ -28,7 +28,10 @@
         "name": {
             "description": "Determines which type of firmware update status to view",
             "type": "string",
-            "enum": ["user", "card"]
+            "enum": [
+                "user",
+                "card"
+            ]
         },
         "stop": {
             "description": "Clear DFU state and delete the local firmware image from the Notecard",
@@ -40,7 +43,10 @@
         },
         "version": {
             "description": "Version information on the host firmware to pass to Notehub",
-            "type": ["string", "object"]
+            "type": [
+                "string",
+                "object"
+            ]
         },
         "vvalue": {
             "description": "A voltage-variable string that controls, by Notecard voltage, whether or not DFU is enabled",

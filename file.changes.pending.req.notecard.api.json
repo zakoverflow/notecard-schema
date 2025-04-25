@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/file.changes.pending.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
+    "title": "file.changes.pending Request Application Programming Interface (API) Schema",
     "description": "JSON description of the file.changes.pending API",
     "type": "object",
     "properties": {

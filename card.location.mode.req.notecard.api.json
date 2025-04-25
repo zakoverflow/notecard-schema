@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.location.mode.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
+    "title": "card.location.mode Request Application Programming Interface (API) Schema",
     "description": "JSON description of the card.location.mode API",
     "type": "object",
     "properties": {
@@ -28,7 +28,13 @@
         "mode": {
             "description": "Must be one of: empty string to retrieve the current mode, 'off' to turn location mode off, 'periodic' to sample location at a specified interval, 'continuous' to enable the Notecard's GPS/GNSS module for continuous sampling, or 'fixed' to report the location as a fixed location",
             "type": "string",
-            "enum": ["", "off", "periodic", "continuous", "fixed"]
+            "enum": [
+                "",
+                "off",
+                "periodic",
+                "continuous",
+                "fixed"
+            ]
         },
         "seconds": {
             "description": "When in periodic mode, location will be sampled at this interval, if the Notecard detects motion",

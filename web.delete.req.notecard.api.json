@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/web.delete.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
+    "title": "web.delete Request Application Programming Interface (API) Schema",
     "description": "JSON description of the web.delete API",
     "type": "object",
     "properties": {
