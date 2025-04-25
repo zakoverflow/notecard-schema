@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/file.delete.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the file.delete API",
+    "title": "file.delete Request Application Programming Interface (API) Schema",
+    "description": "Deletes Notefiles and the Notes they contain.",
     "type": "object",
     "properties": {
         "manifestVersion": {

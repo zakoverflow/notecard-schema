@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.motion.sync.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.motion.sync API",
+    "title": "card.motion.sync Request Application Programming Interface (API) Schema",
+    "description": "Configures automatic sync triggered by Notecard movement.",
     "type": "object",
     "properties": {
         "manifestVersion": {

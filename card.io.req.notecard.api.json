@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.io.req.notecard.api.json",
     "title": "card.io Request Application Programming Interface (API) Schema",
-    "description": "Can be used to override the Notecard's I2C address from its default of 0x17 and change behaviors of the onboard LED and USB port.",
+    "description": "Can be used to override the Notecard's I2C address from its default of 0x17\nand change behaviors of the onboard LED and USB port.",
     "type": "object",
     "properties": {
         "manifestVersion": {
@@ -32,7 +32,15 @@
         "mode": {
             "description": "Set to '-usb' to disable the Notecard's USB port. Re-enable the USB port with 'usb' or '+usb'. Set to '+busy' for LED on when Notecard is awake, and off when asleep. Set to '-busy' to reset to default. Set to 'i2c-master-disable' to disable Notecard acting as an I2C master",
             "type": "string",
-            "enum": ["-usb", "usb", "+usb", "+busy", "-busy", "i2c-master-disable", "i2c-master-enable"]
+            "enum": [
+                "-usb",
+                "usb",
+                "+usb",
+                "+busy",
+                "-busy",
+                "i2c-master-disable",
+                "i2c-master-enable"
+            ]
         }
     }
 }

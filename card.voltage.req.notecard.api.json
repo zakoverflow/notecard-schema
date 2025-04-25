@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.voltage.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.voltage API",
+    "title": "card.voltage Request Application Programming Interface (API) Schema",
+    "description": "Provides the current V+ voltage level on the Notecard, and provides\ninformation about historical voltage trends. When used with the mode\nargument, configures voltage thresholds based on how the device\nis powered.",
     "type": "object",
     "properties": {
         "manifestVersion": {
@@ -32,7 +32,14 @@
         "mode": {
             "description": "Used to set voltage thresholds based on how the Notecard will be powered",
             "type": "string",
-            "enum": ["default", "lipo", "li", "alkaline", "tad", "lic"]
+            "enum": [
+                "default",
+                "lipo",
+                "li",
+                "alkaline",
+                "tad",
+                "lic"
+            ]
         },
         "vmax": {
             "description": "Maximum voltage threshold",

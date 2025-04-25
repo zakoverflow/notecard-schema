@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.carrier.req.notecard.api.json",
     "title": "card.carrier Request Application Programming Interface (API) Schema",
-    "description": "Uses the AUX_CHARGING pin on the Notecard edge connector to notify the Notecard that the pin is connected to a Notecarrier that supports charging, using open-drain. Once set, {\"charging\":true} will appear in a response if the Notecarrier is currently indicating that charging is in progress.",
+    "description": "Uses the AUX_CHARGING pin on the Notecard edge connector to notify the\nNotecard that the pin is connected to a Notecarrier that supports charging,\nusing open-drain.",
     "type": "object",
     "properties": {
         "manifestVersion": {
@@ -28,7 +28,11 @@
         "mode": {
             "description": "The AUX_CHARGING mode. Set to 'charging' to tell the Notecard that AUX_CHARGING is connected to a Notecarrier that supports charging on AUX_CHARGING. Set to '-' or 'off' to turn off the AUX_CHARGING detection",
             "type": "string",
-            "enum": ["charging", "-", "off"]
+            "enum": [
+                "charging",
+                "-",
+                "off"
+            ]
         }
     }
 }

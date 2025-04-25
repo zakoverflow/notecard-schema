@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.motion.track.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.motion.track API",
+    "title": "card.motion.track Request Application Programming Interface (API) Schema",
+    "description": "Configures automatic capture of Notecard accelerometer motion in a Notefile.",
     "type": "object",
     "properties": {
         "manifestVersion": {

@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/hub.sync.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the hub.sync API",
+    "title": "hub.sync Request Application Programming Interface (API) Schema",
+    "description": "Manually initiates a sync with Notehub.",
     "type": "object",
     "properties": {
         "manifestVersion": {

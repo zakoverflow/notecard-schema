@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.location.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.location API",
+    "title": "card.location Request Application Programming Interface (API) Schema",
+    "description": "Retrieves the last known location of the Notecard and the time at which it was\nacquired. Use\ncard.location.mode\nto configure location settings.",
     "type": "object",
     "properties": {
         "manifestVersion": {

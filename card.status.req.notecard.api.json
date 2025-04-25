@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.status.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.status API",
+    "title": "card.status Request Application Programming Interface (API) Schema",
+    "description": "Returns general information about the Notecard's operating status.",
     "type": "object",
     "properties": {
         "manifestVersion": {

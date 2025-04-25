@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.usage.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.usage API",
+    "title": "card.usage Request Application Programming Interface (API) Schema",
+    "description": "Returns the card's network usage statistics.",
     "type": "object",
     "properties": {
         "manifestVersion": {
@@ -28,7 +28,15 @@
         "mode": {
             "description": "The type of usage data to return",
             "type": "string",
-            "enum": ["total", "1hour", "24hour", "current", "hourly", "daily", "monthly"]
+            "enum": [
+                "total",
+                "1hour",
+                "24hour",
+                "current",
+                "hourly",
+                "daily",
+                "monthly"
+            ]
         },
         "offset": {
             "description": "When mode is hourly, daily, or monthly, this is the offset from the current period",

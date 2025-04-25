@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.wireless.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.wireless API",
+    "title": "card.wireless Request Application Programming Interface (API) Schema",
+    "description": "View the last known network state, or customize the behavior of the modem.\nNote: Be careful when using this mode with hardware not on hand as a\nmistake may cause loss of network and Notehub access.",
     "type": "object",
     "properties": {
         "manifestVersion": {
@@ -28,7 +28,13 @@
         "mode": {
             "description": "Network scan mode",
             "type": "string",
-            "enum": ["-", "auto", "m", "nb", "gprs"]
+            "enum": [
+                "-",
+                "auto",
+                "m",
+                "nb",
+                "gprs"
+            ]
         },
         "apn": {
             "description": "Access Point Name (APN) when using an external SIM",
@@ -37,7 +43,13 @@
         "method": {
             "description": "Used when configuring a Notecard to failover to a different SIM",
             "type": "string",
-            "enum": ["-", "dual-primary-secondary", "dual-secondary-primary", "primary", "secondary"]
+            "enum": [
+                "-",
+                "dual-primary-secondary",
+                "dual-secondary-primary",
+                "primary",
+                "secondary"
+            ]
         }
     }
 }

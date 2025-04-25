@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/hub.set.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the hub.set API",
+    "title": "hub.set Request Application Programming Interface (API) Schema",
+    "description": "The hub.set request is the primary method for controlling the Notecard's\nNotehub connection and sync behavior.",
     "type": "object",
     "properties": {
         "manifestVersion": {
@@ -36,7 +36,12 @@
         "mode": {
             "description": "Hub mode (periodic, continuous, minimum, off)",
             "type": "string",
-            "enum": ["continuous", "periodic", "minimum", "off"]
+            "enum": [
+                "continuous",
+                "periodic",
+                "minimum",
+                "off"
+            ]
         },
         "sn": {
             "description": "Serial number",
@@ -100,7 +105,10 @@
         },
         "version": {
             "description": "Version information",
-            "type": ["string", "object"]
+            "type": [
+                "string",
+                "object"
+            ]
         }
     }
 }

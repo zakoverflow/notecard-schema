@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/note.update.req.notecard.api.json",
-    "title": "Notecard Application Programming Interface (API) Schema",
-    "description": "JSON description of the note.update API",
+    "title": "note.update Request Application Programming Interface (API) Schema",
+    "description": "Updates a Note in a DB Notefile by its ID, replacing the existing body\nand/or payload.",
     "type": "object",
     "properties": {
         "manifestVersion": {
