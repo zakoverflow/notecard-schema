@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.binary.get.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.binary.get API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.binary.get"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.binary.get"
+            }
+        },
+        "cobs": {
+            "description": "The size of the COBS-encoded data you are expecting to be returned (in bytes)",
+            "type": "integer"
+        },
+        "offset": {
+            "description": "Used along with length, the number of bytes to offset the binary payload from 0 when retrieving binary data from the Notecard",
+            "type": "integer",
+            "minimum": 0
+        },
+        "length": {
+            "description": "Used along with offset, the number of bytes to retrieve from the binary storage area of the Notecard",
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

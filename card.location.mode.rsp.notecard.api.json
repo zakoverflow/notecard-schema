@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.location.mode.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.location.mode API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "mode": {
+            "description": "The GPS/GNSS connection mode. Will be continuous, periodic, or off",
+            "type": "string",
+            "enum": ["continuous", "periodic", "off", "fixed"]
+        },
+        "seconds": {
+            "description": "When in periodic mode, location will be sampled at this interval, if the Notecard detects motion",
+            "type": "integer",
+            "minimum": 0
+        },
+        "lat": {
+            "description": "The latitude in degrees of the last known location",
+            "type": "number"
+        },
+        "lon": {
+            "description": "The longitude in degrees of the last known location",
+            "type": "number"
+        },
+        "max": {
+            "description": "Maximum number of seconds to wait for a GPS fix",
+            "type": "integer"
+        }
+    }
+}

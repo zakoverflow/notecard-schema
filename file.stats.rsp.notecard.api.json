@@ -1,0 +1,31 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/file.stats.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the file.stats API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "total": {
+            "description": "Total number of notes in the file",
+            "type": "integer"
+        },
+        "changes": {
+            "description": "Number of changes to the file",
+            "type": "integer"
+        },
+        "sync": {
+            "description": "Whether the file is synced with Notehub",
+            "type": "boolean"
+        }
+    }
+}

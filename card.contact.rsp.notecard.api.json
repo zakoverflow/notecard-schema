@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.contact.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.contact API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "name": {
+            "description": "Name of the Notecard maintainer",
+            "type": "string"
+        },
+        "org": {
+            "description": "Organization name of the Notecard maintainer",
+            "type": "string"
+        },
+        "role": {
+            "description": "Role of the Notecard maintainer",
+            "type": "string"
+        },
+        "email": {
+            "description": "Email address of the Notecard maintainer",
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.dfu.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.dfu API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.dfu"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.dfu"
+            }
+        },
+        "name": {
+            "description": "One of the supported classes of host MCU. Supported MCU classes are 'esp32', 'stm32', 'stm32-bi', '-'",
+            "type": "string",
+            "enum": ["esp32", "stm32", "stm32-bi", "-"]
+        },
+        "on": {
+            "description": "Set to true to enable Notecard Outboard Firmware Update",
+            "type": "boolean"
+        },
+        "off": {
+            "description": "Set to true to disable Notecard Outboard Firmware Update from occurring",
+            "type": "boolean"
+        },
+        "seconds": {
+            "description": "When used with 'off':true, disable Notecard Outboard Firmware Update operations for the specified number of seconds",
+            "type": "integer"
+        },
+        "stop": {
+            "description": "Set to true to disable the host RESET that is normally performed on the host MCU when the Notecard starts up",
+            "type": "boolean"
+        }
+    }
+}

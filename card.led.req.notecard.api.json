@@ -1,0 +1,42 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.led.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.led API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.led"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.led"
+            }
+        },
+        "mode": {
+            "description": "Used to specify the color of the LED to turn on or off. Possible values for LEDs are 'red', 'green', 'yellow'. For NeoPixels, possible values are 'red', 'green', 'blue', 'yellow', 'cyan', 'magenta', 'orange', 'white', 'gray'",
+            "type": "string",
+            "enum": ["red", "green", "yellow", "blue", "cyan", "magenta", "orange", "white", "gray"]
+        },
+        "on": {
+            "description": "Set to true to turn the specified LED or NeoPixel on",
+            "type": "boolean"
+        },
+        "off": {
+            "description": "Set to true to turn the specified LED or NeoPixel off",
+            "type": "boolean"
+        }
+    }
+}

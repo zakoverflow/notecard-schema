@@ -1,0 +1,38 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.io.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.io API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.io"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.io"
+            }
+        },
+        "i2c": {
+            "description": "The alternate address to use for I2C communication. Pass -1 to reset to the default address",
+            "type": "integer"
+        },
+        "mode": {
+            "description": "Set to '-usb' to disable the Notecard's USB port. Re-enable the USB port with 'usb' or '+usb'. Set to '+busy' for LED on when Notecard is awake, and off when asleep. Set to '-busy' to reset to default. Set to 'i2c-master-disable' to disable Notecard acting as an I2C master",
+            "type": "string",
+            "enum": ["-usb", "usb", "+usb", "+busy", "-busy", "i2c-master-disable", "i2c-master-enable"]
+        }
+    }
+}

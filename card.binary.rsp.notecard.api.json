@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.binary.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.binary API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "cobs": {
+            "description": "The size of COBS-encoded data stored in the reserved area",
+            "type": "integer"
+        },
+        "connected": {
+            "description": "Returns true if the Notecard is connected to the network",
+            "type": "boolean"
+        },
+        "err": {
+            "description": "If present, a string describing the error that occurred during transmission",
+            "type": "string"
+        },
+        "length": {
+            "description": "The length of the binary data",
+            "type": "integer"
+        }
+    }
+}

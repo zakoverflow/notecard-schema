@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/dfu.status.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the dfu.status API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "mode": {
+            "description": "Current DFU mode",
+            "type": "string"
+        },
+        "status": {
+            "description": "Status of the DFU process",
+            "type": "string"
+        },
+        "on": {
+            "description": "Whether firmware downloads from Notehub are allowed",
+            "type": "boolean"
+        },
+        "off": {
+            "description": "Whether firmware downloads from Notehub are disabled",
+            "type": "boolean"
+        },
+        "pending": {
+            "description": "Whether a firmware update is pending",
+            "type": "boolean"
+        },
+        "body": {
+            "description": "Additional information about the DFU status",
+            "type": "object"
+        }
+    }
+}

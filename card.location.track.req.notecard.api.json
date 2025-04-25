@@ -1,0 +1,54 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.location.track.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.location.track API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.location.track"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.location.track"
+            }
+        },
+        "start": {
+            "description": "Set to true to start Notefile tracking",
+            "type": "boolean"
+        },
+        "heartbeat": {
+            "description": "When start is true, set to true to enable tracking even when motion is not detected",
+            "type": "boolean"
+        },
+        "hours": {
+            "description": "If heartbeat is true, add a heartbeat entry at this hourly interval. Use a negative integer to specify a heartbeat in minutes instead of hours",
+            "type": "integer"
+        },
+        "sync": {
+            "description": "Set to true to perform an immediate sync to the Notehub each time a new Note is added",
+            "type": "boolean"
+        },
+        "stop": {
+            "description": "Set to true to stop Notefile tracking",
+            "type": "boolean"
+        },
+        "file": {
+            "description": "The name of the Notefile to store location data in",
+            "type": "string",
+            "default": "track.qo"
+        }
+    }
+}

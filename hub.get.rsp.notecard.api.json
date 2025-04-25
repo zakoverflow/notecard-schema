@@ -1,0 +1,59 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/hub.get.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the hub.get API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "device": {
+            "description": "The DeviceUID for the Notecard",
+            "type": "string"
+        },
+        "product": {
+            "description": "Product identifier",
+            "type": "string"
+        },
+        "mode": {
+            "description": "Hub mode (periodic, continuous, minimum)",
+            "type": "string"
+        },
+        "outbound": {
+            "description": "Outbound data period in seconds",
+            "type": "integer"
+        },
+        "voutbound": {
+            "description": "Voltage-variable outbound period",
+            "type": "string"
+        },
+        "inbound": {
+            "description": "Inbound data period in seconds",
+            "type": "integer"
+        },
+        "vinbound": {
+            "description": "Voltage-variable inbound period",
+            "type": "string"
+        },
+        "host": {
+            "description": "Host address",
+            "type": "string"
+        },
+        "sn": {
+            "description": "Serial number",
+            "type": "string"
+        },
+        "sync": {
+            "description": "Whether sync is enabled",
+            "type": "boolean"
+        }
+    }
+}

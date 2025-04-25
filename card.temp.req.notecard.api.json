@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.temp.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.temp API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.temp"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.temp"
+            }
+        },
+        "minutes": {
+            "description": "If specified, creates a templated _temp.qo file that gathers Notecard temperature value at the specified minutes interval",
+            "type": "integer"
+        },
+        "status": {
+            "description": "Overrides minutes with a voltage-variable value",
+            "type": "string"
+        },
+        "stop": {
+            "description": "If set to true, the Notecard will stop logging the temperature value at the interval specified with the minutes parameter",
+            "type": "boolean"
+        },
+        "sync": {
+            "description": "If set to true, the Notecard will immediately sync any pending _temp.qo Notes created with the minutes parameter",
+            "type": "boolean"
+        }
+    }
+}

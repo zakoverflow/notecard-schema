@@ -1,0 +1,46 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.voltage.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.voltage API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.voltage"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.voltage"
+            }
+        },
+        "hours": {
+            "description": "The number of hours to analyze, up to 720 (30 days)",
+            "type": "integer"
+        },
+        "mode": {
+            "description": "Used to set voltage thresholds based on how the Notecard will be powered",
+            "type": "string",
+            "enum": ["default", "lipo", "li", "alkaline", "tad", "lic"]
+        },
+        "vmax": {
+            "description": "Maximum voltage threshold",
+            "type": "number"
+        },
+        "vmin": {
+            "description": "Minimum voltage threshold",
+            "type": "number"
+        }
+    }
+}

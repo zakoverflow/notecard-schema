@@ -1,0 +1,101 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.aux.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.aux API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.aux"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.aux"
+            }
+        },
+        "mode": {
+            "description": "The AUX mode",
+            "type": "string",
+            "enum": ["dfu", "gpio", "led", "monitor", "motion", "neo", "neo-monitor", "off", "track", "track-monitor", "track-neo-monitor", "-"]
+        },
+        "usage": {
+            "description": "An ordered list of pin modes for each AUX pin when in GPIO mode",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": ["", "off", "high", "low", "input", "input-pulldown", "input-pullup", "count", "count-pulldown", "count-pullup"]
+            }
+        },
+        "seconds": {
+            "description": "When in gpio mode, if an AUX pin is configured as a count type, the count of rising edges can be broken into samples of this duration",
+            "type": "integer",
+            "minimum": 0
+        },
+        "max": {
+            "description": "When in gpio mode, if an AUX pin is configured as a count type, the maximum number of samples of duration seconds",
+            "type": "integer",
+            "minimum": 0
+        },
+        "start": {
+            "description": "When in gpio mode, if an AUX pin is configured as a count type, set to true to reset counters and start incrementing",
+            "type": "boolean"
+        },
+        "gps": {
+            "description": "Deprecated. If true, along with mode:track the Notecard supports the use of an external GPS module",
+            "type": "boolean"
+        },
+        "rate": {
+            "description": "The AUX UART baud rate for debug communication over the AUXRX and AUXTX pins",
+            "type": "integer"
+        },
+        "sync": {
+            "description": "If true, for pins set as input by usage, the Notecard will autonomously report any state changes as new notes in file",
+            "type": "boolean"
+        },
+        "file": {
+            "description": "The name of the Notefile used to report state changes when used in conjunction with sync:true",
+            "type": "string"
+        },
+        "connected": {
+            "description": "If true, defers the sync of the state change Notefile to the next sync as configured by the hub.set request",
+            "type": "boolean"
+        },
+        "limit": {
+            "description": "If true, along with mode:track and gps:true the Notecard will disable concurrent modem use during GPS tracking",
+            "type": "boolean"
+        },
+        "sensitivity": {
+            "description": "When used with mode:neo-monitor or mode:track-neo-monitor, this controls the brightness of NeoPixel lights",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100
+        },
+        "ms": {
+            "description": "When in gpio mode, this argument configures a debouncing interval",
+            "type": "integer",
+            "minimum": 0
+        },
+        "count": {
+            "description": "When used with mode:neo-monitor or mode:track-neo-monitor, this controls the number of NeoPixels to use in a strip",
+            "type": "integer",
+            "enum": [1, 2, 5]
+        },
+        "offset": {
+            "description": "When used with mode:neo-monitor or mode:track-neo-monitor, this is the 1-based index in a strip of NeoPixels",
+            "type": "integer",
+            "minimum": 1
+        }
+    }
+}

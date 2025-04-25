@@ -1,0 +1,64 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.wireless.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.wireless API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "status": {
+            "description": "Current network status",
+            "type": "string"
+        },
+        "count": {
+            "description": "Number of networks found",
+            "type": "integer"
+        },
+        "net": {
+            "description": "Array of networks found",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "rat": {
+                        "description": "Radio Access Technology",
+                        "type": "string"
+                    },
+                    "band": {
+                        "description": "Frequency band",
+                        "type": "string"
+                    },
+                    "rssi": {
+                        "description": "Received Signal Strength Indicator",
+                        "type": "integer"
+                    },
+                    "mcc": {
+                        "description": "Mobile Country Code",
+                        "type": "integer"
+                    },
+                    "mnc": {
+                        "description": "Mobile Network Code",
+                        "type": "integer"
+                    },
+                    "lac": {
+                        "description": "Location Area Code",
+                        "type": "integer"
+                    },
+                    "cid": {
+                        "description": "Cell ID",
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.status.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.status API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "status": {
+            "description": "General status information",
+            "type": "string"
+        },
+        "usb": {
+            "description": "Is the Notecard is being powered by USB",
+            "type": "boolean"
+        },
+        "storage": {
+            "description": "The percentage of storage in use on the Notecard",
+            "type": "integer"
+        },
+        "time": {
+            "description": "The UNIX Epoch Time of approximately when the Notecard was first powered up",
+            "type": "integer"
+        },
+        "connected": {
+            "description": "Whether the Notecard is connected to the Notehub",
+            "type": "boolean"
+        },
+        "cell": {
+            "description": "Whether the Notecard has a cellular connection",
+            "type": "boolean"
+        },
+        "sync": {
+            "description": "Whether the Notecard is currently syncing with the Notehub",
+            "type": "boolean"
+        },
+        "inbound": {
+            "description": "Number of inbound Notes waiting to be retrieved by the host",
+            "type": "integer"
+        },
+        "outbound": {
+            "description": "Number of outbound Notes waiting to be synced to the Notehub",
+            "type": "integer"
+        }
+    }
+}

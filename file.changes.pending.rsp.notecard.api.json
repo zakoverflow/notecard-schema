@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/file.changes.pending.rsp.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the file.changes.pending API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "total": {
+            "description": "The total of unsynced notes across all Notefiles",
+            "type": "integer"
+        },
+        "changes": {
+            "description": "The number of changes across all files",
+            "type": "integer"
+        },
+        "pending": {
+            "description": "Whether there are pending changes",
+            "type": "boolean"
+        },
+        "info": {
+            "description": "Information about changes for each Notefile",
+            "type": "object"
+        }
+    }
+}

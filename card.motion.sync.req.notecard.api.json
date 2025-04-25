@@ -1,0 +1,49 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/json-schema-internal/master/card.motion.sync.req.notecard.api.json",
+    "title": "Notecard Application Programming Interface (API) Schema",
+    "description": "JSON description of the card.motion.sync API",
+    "type": "object",
+    "properties": {
+        "manifestVersion": {
+            "description": "Semantic version of the schema",
+            "type": "string",
+            "const": "0.1.1"
+        },
+        "apiVersion": {
+            "description": "Semantic version of the Notecard API",
+            "type": "string",
+            "const": "9.1.1"
+        },
+        "oneOf": {
+            "cmd": {
+                "description": "Command for the Notecard (no response)",
+                "const": "card.motion.sync"
+            },
+            "req": {
+                "description": "Request for the Notecard (expects response)",
+                "const": "card.motion.sync"
+            }
+        },
+        "start": {
+            "description": "Set to true to start motion-triggered syncing",
+            "type": "boolean"
+        },
+        "stop": {
+            "description": "Set to true to stop motion-triggered syncing",
+            "type": "boolean"
+        },
+        "minutes": {
+            "description": "The maximum frequency at which sync will be triggered",
+            "type": "integer"
+        },
+        "count": {
+            "description": "The number of most recent motion buckets to examine",
+            "type": "integer"
+        },
+        "threshold": {
+            "description": "The number of buckets that must indicate motion in order to trigger a sync",
+            "type": "integer"
+        }
+    }
+}
