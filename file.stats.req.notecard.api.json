@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/file.stats.req.notecard.api.json",
     "title": "file.stats Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the file.stats API",
+    "description": "Gets resource statistics about local Notefiles.",
     "type": "object",
     "properties": {
         "manifestVersion": {

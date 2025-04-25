@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/hub.sync.status.req.notecard.api.json",
     "title": "hub.sync.status Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the hub.sync.status API",
+    "description": "Check on the status of a recently triggered or previous sync.",
     "type": "object",
     "properties": {
         "manifestVersion": {

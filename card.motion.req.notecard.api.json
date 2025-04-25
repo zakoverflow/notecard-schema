@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.motion.req.notecard.api.json",
     "title": "card.motion Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.motion API",
+    "description": "Returns information about the Notecard accelerometer's motion and orientation.\nMotion tracking must be enabled first with card.motion.mode. Otherwise, this\nrequest will return {}.",
     "type": "object",
     "properties": {
         "manifestVersion": {

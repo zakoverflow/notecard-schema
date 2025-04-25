@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.location.mode.req.notecard.api.json",
     "title": "card.location.mode Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.location.mode API",
+    "description": "Sets location-related configuration settings. Retrieves the current location\nmode when passed with no argument.",
     "type": "object",
     "properties": {
         "manifestVersion": {

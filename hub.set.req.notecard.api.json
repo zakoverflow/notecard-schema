@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/hub.set.req.notecard.api.json",
     "title": "hub.set Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the hub.set API",
+    "description": "The hub.set request is the primary method for controlling the Notecard's\nNotehub connection and sync behavior.",
     "type": "object",
     "properties": {
         "manifestVersion": {

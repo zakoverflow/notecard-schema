@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.usage.req.notecard.api.json",
     "title": "card.usage Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.usage API",
+    "description": "Returns the card's network usage statistics.",
     "type": "object",
     "properties": {
         "manifestVersion": {

@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.motion.mode.req.notecard.api.json",
     "title": "card.motion.mode Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.motion.mode API",
+    "description": "Configures accelerometer motion monitoring parameters used when providing\nresults to card.motion.",
     "type": "object",
     "properties": {
         "manifestVersion": {

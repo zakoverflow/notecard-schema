@@ -32,21 +32,31 @@ def get_description_from_docs(api_name):
         soup = BeautifulSoup(response.text, 'html.parser')
         
         section_id = api_name.replace('.', '')
-        section = soup.find(id=section_id)
+        heading = soup.find(id=section_id)
         
-        if not section:
-            section = soup.find(string=re.compile(api_name))
-            if not section:
-                print(f"Warning: Could not find documentation for {api_name}")
-                return None
+        if not heading:
+            for tag in ['h2', 'h3']:
+                headings = soup.find_all(tag)
+                for h in headings:
+                    if api_name in h.text:
+                        heading = h
+                        break
+                if heading:
+                    break
         
-        parent = section.parent
+        if not heading:
+            print(f"Warning: Could not find documentation heading for {api_name}")
+            return None
+        
         description_section = None
+        current = heading.next_sibling
         
-        for sibling in parent.next_siblings:
-            if sibling.name == 'p':
-                description_section = sibling
-                break
+        while current and not description_section:
+            if current.name == 'p':
+                description_section = current
+            elif hasattr(current, 'text') and current.text.strip() and current.name not in ['h2', 'h3', 'h4', 'header']:
+                description_section = current
+            current = current.next_sibling
         
         if description_section:
             description = description_section.text.strip()
@@ -58,6 +68,7 @@ def get_description_from_docs(api_name):
         print(f"Error fetching documentation for {api_name}: {e}")
         return None
 
+updated_count = 0
 for filename in os.listdir('.'):
     if not filename.endswith('.notecard.api.json'):
         continue
@@ -69,9 +80,6 @@ for filename in os.listdir('.'):
             print(f"Error parsing {filename}: {e}")
             continue
     
-    if data.get('title') != "Notecard Application Programming Interface (API) Schema":
-        continue
-    
     match = re.match(r'(.+)\.(req|rsp)\.notecard\.api\.json', filename)
     if not match:
         print(f"Warning: filename {filename} doesn't match expected pattern")
@@ -79,13 +87,16 @@ for filename in os.listdir('.'):
     
     api_name, req_type = match.groups()
     
-    req_or_resp = "Request" if req_type == "req" else "Response"
-    data['title'] = f"{api_name} {req_or_resp} Application Programming Interface (API) Schema"
+    if "Notecard Application Programming Interface (API) Schema" in data.get('title', ''):
+        req_or_resp = "Request" if req_type == "req" else "Response"
+        data['title'] = f"{api_name} {req_or_resp} Application Programming Interface (API) Schema"
+        updated_count += 1
     
-    if req_type == "req" and 'description' not in data:
+    if req_type == "req":
         description = get_description_from_docs(api_name)
         if description:
             data['description'] = description
+            updated_count += 1
     
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)
@@ -93,4 +104,4 @@ for filename in os.listdir('.'):
     
     print(f"Updated {filename}")
 
-print("Done updating schema files")
+print(f"Done updating schema files. Updated {updated_count} fields.")

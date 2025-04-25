@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/hub.status.req.notecard.api.json",
     "title": "hub.status Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the hub.status API",
+    "description": "Displays the current status of the Notecard's connection to Notehub.",
     "type": "object",
     "properties": {
         "manifestVersion": {

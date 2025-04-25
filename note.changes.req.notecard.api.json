@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/note.changes.req.notecard.api.json",
     "title": "note.changes Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the note.changes API",
+    "description": "Used to incrementally retrieve changes within a specific Notefile.",
     "type": "object",
     "properties": {
         "manifestVersion": {

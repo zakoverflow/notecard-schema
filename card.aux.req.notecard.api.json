@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.aux.req.notecard.api.json",
     "title": "card.aux Request Application Programming Interface (API) Schema",
-    "description": "Configure various uses of the general-purpose I/O (GPIO) pins AUX1-AUX4 on the Notecard edge connector for tracking applications and simple GPIO sensing and counting tasks.",
+    "description": "Configure various uses of the general-purpose I/O (GPIO) pins AUX1-AUX4 on\nthe Notecard edge connector for tracking applications and simple GPIO sensing\nand counting tasks.",
     "type": "object",
     "properties": {
         "manifestVersion": {
@@ -28,14 +28,38 @@
         "mode": {
             "description": "The AUX mode",
             "type": "string",
-            "enum": ["dfu", "gpio", "led", "monitor", "motion", "neo", "neo-monitor", "off", "track", "track-monitor", "track-neo-monitor", "-"]
+            "enum": [
+                "dfu",
+                "gpio",
+                "led",
+                "monitor",
+                "motion",
+                "neo",
+                "neo-monitor",
+                "off",
+                "track",
+                "track-monitor",
+                "track-neo-monitor",
+                "-"
+            ]
         },
         "usage": {
             "description": "An ordered list of pin modes for each AUX pin when in GPIO mode",
             "type": "array",
             "items": {
                 "type": "string",
-                "enum": ["", "off", "high", "low", "input", "input-pulldown", "input-pullup", "count", "count-pulldown", "count-pullup"]
+                "enum": [
+                    "",
+                    "off",
+                    "high",
+                    "low",
+                    "input",
+                    "input-pulldown",
+                    "input-pullup",
+                    "count",
+                    "count-pulldown",
+                    "count-pullup"
+                ]
             }
         },
         "seconds": {
@@ -58,7 +82,21 @@
         },
         "rate": {
             "description": "The AUX UART baud rate for debug communication over the AUXRX and AUXTX pins",
-            "enum": [300, 600, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600],
+            "enum": [
+                300,
+                600,
+                1200,
+                2400,
+                4800,
+                9600,
+                19200,
+                38400,
+                57600,
+                115200,
+                230400,
+                460800,
+                921600
+            ],
             "default": 115200
         },
         "sync": {
@@ -91,7 +129,11 @@
         "count": {
             "description": "When used with mode:neo-monitor or mode:track-neo-monitor, this controls the number of NeoPixels to use in a strip",
             "type": "integer",
-            "enum": [1, 2, 5]
+            "enum": [
+                1,
+                2,
+                5
+            ]
         },
         "offset": {
             "description": "When used with mode:neo-monitor or mode:track-neo-monitor, this is the 1-based index in a strip of NeoPixels",

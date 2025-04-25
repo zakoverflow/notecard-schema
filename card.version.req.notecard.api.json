@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.version.req.notecard.api.json",
     "title": "card.version Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the card.version API",
+    "description": "Returns firmware version information for the Notecard.",
     "type": "object",
     "properties": {
         "manifestVersion": {

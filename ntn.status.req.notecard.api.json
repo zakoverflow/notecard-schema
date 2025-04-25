@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/ntn.status.req.notecard.api.json",
     "title": "ntn.status Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the ntn.status API",
+    "description": "Displays the current status of a Notecard's connection to a paired Starnote.",
     "type": "object",
     "properties": {
         "manifestVersion": {

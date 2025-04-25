@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.dfu.req.notecard.api.json",
     "title": "card.dfu Request Application Programming Interface (API) Schema",
-    "description": "Used to configure a Notecard for Notecard Outboard Firmware Update.",
+    "description": "Used to configure a Notecard for\nNotecard Outboard Firmware Update.",
     "type": "object",
     "properties": {
         "manifestVersion": {
@@ -28,7 +28,12 @@
         "name": {
             "description": "One of the supported classes of host MCU. Supported MCU classes are 'esp32', 'stm32', 'stm32-bi', '-'",
             "type": "string",
-            "enum": ["esp32", "stm32", "stm32-bi", "-"]
+            "enum": [
+                "esp32",
+                "stm32",
+                "stm32-bi",
+                "-"
+            ]
         },
         "on": {
             "description": "Set to true to enable Notecard Outboard Firmware Update",

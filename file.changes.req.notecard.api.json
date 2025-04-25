@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/file.changes.req.notecard.api.json",
     "title": "file.changes Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the file.changes API",
+    "description": "Used to perform queries on a single or multiple files to determine if new Notes\nare available to read, or if there are unsynced Notes in local Notefiles.",
     "type": "object",
     "properties": {
         "manifestVersion": {

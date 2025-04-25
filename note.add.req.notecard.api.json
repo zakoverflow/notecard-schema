@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/note.add.req.notecard.api.json",
     "title": "note.add Request Application Programming Interface (API) Schema",
-    "description": "JSON description of the note.add API",
+    "description": "Adds a Note to a Notefile, creating the Notefile if it doesn't yet exist.",
     "type": "object",
     "properties": {
         "manifestVersion": {
