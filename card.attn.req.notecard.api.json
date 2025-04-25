@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.attn.req.notecard.api.json",
     "title": "card.attn Request Application Programming Interface (API) Schema",
-    "description": "Configure hardware notification from the Notecard to MCU host. Note: Requires a connection between the notecard ATTN pin and a GPIO pin on the host MCU.",
+    "description": "Configure hardware notification from the Notecard to MCU host. Note: Requires a connection between the Notecard ATTN pin and a GPIO pin on the host MCU.",
     "type": "object",
     "properties": {
         "manifestVersion": {
@@ -66,6 +66,24 @@
             "type": "boolean"
         }
     },
+    "oneOf": [
+        {
+            "required": ["req"],
+            "properties": {
+                "req": {
+                    "const": "card.attn"
+                }
+            }
+        },
+        {
+            "required": ["cmd"],
+            "properties": {
+                "cmd": {
+                    "const": "card.attn"
+                }
+            }
+        }
+    ],
     "allOf": [
         {
             "if": {
@@ -75,9 +93,7 @@
                         "pattern": "(^watchdog$|^watchdog,|,*\\s*watchdog\\s*,|,*\\s*watchdog$)"
                     }
                 },
-                "required": [
-                    "mode"
-                ]
+                "required": ["mode"]
             },
             "then": {
                 "properties": {
@@ -85,9 +101,7 @@
                         "minimum": 60
                     }
                 },
-                "required": [
-                    "seconds"
-                ]
+                "required": ["seconds"]
             },
             "else": {
                 "if": {
@@ -97,9 +111,7 @@
                             "pattern": "(^sleep$|^sleep,|,*\\s*sleep\\s*,|,*\\s*sleep$)"
                         }
                     },
-                    "required": [
-                        "mode"
-                    ]
+                    "required": ["mode"]
                 },
                 "then": {
                     "properties": {
@@ -107,15 +119,11 @@
                             "minimum": 0
                         }
                     },
-                    "required": [
-                        "seconds"
-                    ]
+                    "required": ["seconds"]
                 },
                 "else": {
                     "not": {
-                        "required": [
-                            "seconds"
-                        ]
+                        "required": ["seconds"]
                     }
                 }
             }
@@ -128,20 +136,14 @@
                         "pattern": "(^files$|^files,|,*\\s*files\\s*,|,*\\s*files$)"
                     }
                 },
-                "required": [
-                    "mode"
-                ]
+                "required": ["mode"]
             },
             "then": {
-                "required": [
-                    "files"
-                ]
+                "required": ["files"]
             },
             "else": {
                 "not": {
-                    "required": [
-                        "files"
-                    ]
+                    "required": ["files"]
                 }
             }
         }
