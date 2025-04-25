@@ -25,5 +25,28 @@
                 "const": "card.time"
             }
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.time"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.time"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

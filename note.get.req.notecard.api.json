@@ -37,5 +37,28 @@
             "description": "Whether to delete the note after getting it",
             "type": "boolean"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "note.get"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "note.get"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

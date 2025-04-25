@@ -25,5 +25,28 @@
                 "const": "card.location"
             }
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.location"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.location"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

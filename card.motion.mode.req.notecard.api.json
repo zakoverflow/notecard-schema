@@ -41,5 +41,28 @@
             "description": "Used to set the accelerometer sample rate",
             "type": "integer"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.motion.mode"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.motion.mode"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

@@ -140,5 +140,28 @@
             "type": "integer",
             "minimum": 1
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.aux"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.aux"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

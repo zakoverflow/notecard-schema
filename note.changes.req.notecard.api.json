@@ -33,5 +33,28 @@
             "description": "Tracker ID for monitoring changes",
             "type": "string"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "note.changes"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "note.changes"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

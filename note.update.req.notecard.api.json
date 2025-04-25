@@ -42,5 +42,28 @@
             "type": "string",
             "format": "binary"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "note.update"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "note.update"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

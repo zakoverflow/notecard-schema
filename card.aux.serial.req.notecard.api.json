@@ -38,5 +38,28 @@
                 "notify,dfu"
             ]
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.aux.serial"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.aux.serial"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

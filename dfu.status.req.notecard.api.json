@@ -64,5 +64,28 @@
             "description": "Sets the host DFU to an error state with the specified string",
             "type": "string"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "dfu.status"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "dfu.status"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

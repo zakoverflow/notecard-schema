@@ -32,5 +32,28 @@
                 "type": "string"
             }
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "file.delete"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "file.delete"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

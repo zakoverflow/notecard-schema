@@ -25,5 +25,28 @@
                 "const": "hub.status"
             }
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "hub.status"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "hub.status"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

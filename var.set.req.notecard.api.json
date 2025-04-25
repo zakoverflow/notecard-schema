@@ -33,5 +33,28 @@
             "description": "Value to set for the variable",
             "type": "string"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "var.set"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "var.set"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

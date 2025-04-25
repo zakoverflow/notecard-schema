@@ -29,5 +29,28 @@
             "description": "Amount of time to sample for buckets of accelerometer-measured movement",
             "type": "integer"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.motion"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.motion"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

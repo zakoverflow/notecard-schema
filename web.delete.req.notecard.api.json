@@ -33,5 +33,28 @@
             "description": "HTTP headers for the request",
             "type": "object"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "web.delete"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "web.delete"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

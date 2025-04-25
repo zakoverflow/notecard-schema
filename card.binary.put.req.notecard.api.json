@@ -38,5 +38,28 @@
             "description": "The MD5 checksum of the data, before it has been encoded",
             "type": "string"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.binary.put"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.binary.put"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

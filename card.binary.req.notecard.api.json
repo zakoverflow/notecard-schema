@@ -29,5 +29,28 @@
             "description": "Clear the COBS area on the Notecard and reset all related arguments previously set by a card.binary request",
             "type": "boolean"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.binary"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.binary"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

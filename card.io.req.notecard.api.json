@@ -42,5 +42,28 @@
                 "i2c-master-enable"
             ]
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.io"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.io"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

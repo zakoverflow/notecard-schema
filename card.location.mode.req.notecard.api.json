@@ -57,5 +57,28 @@
             "description": "Maximum number of seconds to wait for a GPS fix",
             "type": "integer"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.location.mode"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.location.mode"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

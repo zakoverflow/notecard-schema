@@ -34,5 +34,28 @@
                 "off"
             ]
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "ntn.gps"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "ntn.gps"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

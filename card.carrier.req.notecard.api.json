@@ -34,5 +34,28 @@
                 "off"
             ]
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.carrier"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.carrier"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

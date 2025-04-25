@@ -42,5 +42,28 @@
             "description": "HTTP headers for the request",
             "type": "object"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "web.put"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "web.put"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

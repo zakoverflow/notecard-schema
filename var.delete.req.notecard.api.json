@@ -29,5 +29,28 @@
             "description": "Name of the variable to delete",
             "type": "string"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "var.delete"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "var.delete"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

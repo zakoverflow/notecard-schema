@@ -45,5 +45,28 @@
             "description": "The number of buckets that must indicate motion in order to trigger a sync",
             "type": "integer"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.motion.sync"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.motion.sync"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }

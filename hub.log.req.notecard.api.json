@@ -37,5 +37,28 @@
             "description": "Whether to sync this log message immediately",
             "type": "boolean"
         }
-    }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "hub.log"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "hub.log"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false
 }
