@@ -15,22 +15,20 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "file.delete"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "file.delete"
-            }
-        },
         "files": {
             "description": "Array of files to delete",
             "type": "array",
             "items": {
                 "type": "string"
             }
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "file.delete"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "file.delete"
         }
     },
     "oneOf": [

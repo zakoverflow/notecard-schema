@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.motion.sync"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.motion.sync"
-            }
-        },
         "start": {
             "description": "Set to true to start motion-triggered syncing",
             "type": "boolean"
@@ -44,6 +34,14 @@
         "threshold": {
             "description": "The number of buckets that must indicate motion in order to trigger a sync",
             "type": "integer"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.motion.sync"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.motion.sync"
         }
     },
     "oneOf": [

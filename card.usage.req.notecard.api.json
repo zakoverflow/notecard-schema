@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.usage"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.usage"
-            }
-        },
         "mode": {
             "description": "The type of usage data to return",
             "type": "string",
@@ -41,6 +31,14 @@
         "offset": {
             "description": "When mode is hourly, daily, or monthly, this is the offset from the current period",
             "type": "integer"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.usage"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.usage"
         }
     },
     "oneOf": [

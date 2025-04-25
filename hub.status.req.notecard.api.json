@@ -15,15 +15,13 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "hub.status"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "hub.status"
-            }
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "hub.status"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "hub.status"
         }
     },
     "oneOf": [

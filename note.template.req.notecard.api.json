@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "note.template"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "note.template"
-            }
-        },
         "file": {
             "description": "Name of the notefile to add the note to",
             "type": "string"
@@ -36,6 +26,14 @@
         "body": {
             "description": "Template for the note body",
             "type": "object"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "note.template"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "note.template"
         }
     },
     "oneOf": [

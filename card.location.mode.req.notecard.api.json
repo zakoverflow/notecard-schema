@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.location.mode"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.location.mode"
-            }
-        },
         "mode": {
             "description": "Must be one of: empty string to retrieve the current mode, 'off' to turn location mode off, 'periodic' to sample location at a specified interval, 'continuous' to enable the Notecard's GPS/GNSS module for continuous sampling, or 'fixed' to report the location as a fixed location",
             "type": "string",
@@ -56,6 +46,14 @@
         "max": {
             "description": "Maximum number of seconds to wait for a GPS fix",
             "type": "integer"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.location.mode"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.location.mode"
         }
     },
     "oneOf": [

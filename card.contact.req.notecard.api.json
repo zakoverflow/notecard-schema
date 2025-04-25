@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.contact"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.contact"
-            }
-        },
         "name": {
             "description": "Set the name of the Notecard maintainer",
             "type": "string"
@@ -41,6 +31,14 @@
             "description": "Set the email address of the Notecard maintainer",
             "type": "string",
             "format": "email"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.contact"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.contact"
         }
     },
     "oneOf": [

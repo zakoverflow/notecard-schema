@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.led"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.led"
-            }
-        },
         "mode": {
             "description": "Used to specify the color of the LED to turn on or off. Possible values for LEDs are 'red', 'green', 'yellow'. For NeoPixels, possible values are 'red', 'green', 'blue', 'yellow', 'cyan', 'magenta', 'orange', 'white', 'gray'",
             "type": "string",
@@ -47,6 +37,14 @@
         "off": {
             "description": "Set to true to turn the specified LED or NeoPixel off",
             "type": "boolean"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.led"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.led"
         }
     },
     "oneOf": [

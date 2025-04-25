@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.io"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.io"
-            }
-        },
         "i2c": {
             "description": "The alternate address to use for I2C communication. Pass -1 to reset to the default address",
             "type": "integer"
@@ -41,6 +31,14 @@
                 "i2c-master-disable",
                 "i2c-master-enable"
             ]
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.io"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.io"
         }
     },
     "oneOf": [

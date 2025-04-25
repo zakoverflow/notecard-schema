@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "dfu.status"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "dfu.status"
-            }
-        },
         "name": {
             "description": "Determines which type of firmware update status to view",
             "type": "string",
@@ -63,6 +53,14 @@
         "err": {
             "description": "Sets the host DFU to an error state with the specified string",
             "type": "string"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "dfu.status"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "dfu.status"
         }
     },
     "oneOf": [

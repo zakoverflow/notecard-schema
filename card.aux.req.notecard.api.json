@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.aux"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.aux"
-            }
-        },
         "mode": {
             "description": "The AUX mode",
             "type": "string",
@@ -139,6 +129,14 @@
             "description": "When used with mode:neo-monitor or mode:track-neo-monitor, this is the 1-based index in a strip of NeoPixels",
             "type": "integer",
             "minimum": 1
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.aux"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.aux"
         }
     },
     "oneOf": [

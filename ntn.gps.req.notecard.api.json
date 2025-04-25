@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "ntn.gps"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "ntn.gps"
-            }
-        },
         "mode": {
             "description": "GPS mode",
             "type": "string",
@@ -33,6 +23,14 @@
                 "periodic",
                 "off"
             ]
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "ntn.gps"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "ntn.gps"
         }
     },
     "oneOf": [

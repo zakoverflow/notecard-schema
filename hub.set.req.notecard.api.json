@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "hub.set"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "hub.set"
-            }
-        },
         "product": {
             "description": "Product identifier",
             "type": "string"
@@ -109,6 +99,14 @@
                 "string",
                 "object"
             ]
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "hub.set"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "hub.set"
         }
     },
     "oneOf": [

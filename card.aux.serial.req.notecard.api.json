@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.aux.serial"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.aux.serial"
-            }
-        },
         "mode": {
             "description": "The AUX mode. Must be one of the following",
             "type": "string",
@@ -37,6 +27,14 @@
                 "notify,env",
                 "notify,dfu"
             ]
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.aux.serial"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.aux.serial"
         }
     },
     "oneOf": [

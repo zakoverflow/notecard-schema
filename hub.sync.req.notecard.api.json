@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "hub.sync"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "hub.sync"
-            }
-        },
         "allow": {
             "description": "Whether to allow the sync to proceed",
             "type": "boolean"
@@ -36,6 +26,14 @@
         "in": {
             "description": "Whether to sync inbound data",
             "type": "boolean"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "hub.sync"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "hub.sync"
         }
     },
     "oneOf": [

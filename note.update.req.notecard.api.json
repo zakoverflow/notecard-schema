@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "note.update"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "note.update"
-            }
-        },
         "file": {
             "description": "Name of the notefile to update the note in",
             "type": "string"
@@ -41,6 +31,14 @@
             "description": "Updated binary payload data",
             "type": "string",
             "format": "binary"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "note.update"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "note.update"
         }
     },
     "oneOf": [

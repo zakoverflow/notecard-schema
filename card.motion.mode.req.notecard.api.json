@@ -15,16 +15,6 @@
             "type": "string",
             "const": "9.1.1"
         },
-        "oneOf": {
-            "cmd": {
-                "description": "Command for the Notecard (no response)",
-                "const": "card.motion.mode"
-            },
-            "req": {
-                "description": "Request for the Notecard (expects response)",
-                "const": "card.motion.mode"
-            }
-        },
         "start": {
             "description": "Set to true to enable the Notecard accelerometer and start motion tracking",
             "type": "boolean"
@@ -40,6 +30,14 @@
         "sensitivity": {
             "description": "Used to set the accelerometer sample rate",
             "type": "integer"
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.motion.mode"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.motion.mode"
         }
     },
     "oneOf": [
