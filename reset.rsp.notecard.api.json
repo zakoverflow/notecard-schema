@@ -1,0 +1,11 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/reset.rsp.notecard.api.json",
+    "title": "Reset Response Application Programming Interface (API) Schema",
+    "type": "object",
+    "version": "0.1.1",
+    "apiVersion": "9.1.1",
+    "properties": {
+    },
+    "additionalProperties": false
+}

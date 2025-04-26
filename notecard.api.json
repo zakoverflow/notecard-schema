@@ -4,6 +4,7 @@
     "title": "Notecard API Schema",
     "description": "JSON description of the Notecard API",
     "oneOf": [
+        {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/reset.req.notecard.api.json"},
         {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.attn.req.notecard.api.json"},
         {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.aux.req.notecard.api.json"},
         {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.aux.serial.req.notecard.api.json"},
@@ -64,6 +65,5 @@
         {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/web.get.req.notecard.api.json"},
         {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/web.post.req.notecard.api.json"},
         {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/web.put.req.notecard.api.json"},
-        {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/web.req.notecard.api.json"},
-    ]
+        {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/web.req.notecard.api.json"}    ]
 }
