@@ -5,16 +5,6 @@
     "description": "Retrieves current date and time information in UTC. Upon power-up, the Notecard must complete a sync to Notehub in order to obtain time and location data. Before the time is obtained, this request will return {\"zone\":\"UTC,Unknown\"}.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "cmd": {
             "description": "Command for the Notecard (no response)",
             "const": "card.time"
@@ -46,5 +36,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

@@ -4,16 +4,6 @@
     "title": "card.temp Response Application Programming Interface (API) Schema",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "temperature": {
             "description": "Temperature in degrees C",
             "type": "number"
@@ -26,5 +16,7 @@
             "description": "Barometric pressure in hPa (when using BME280 or ENS210 sensor)",
             "type": "number"
         }
-    }
+    },
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

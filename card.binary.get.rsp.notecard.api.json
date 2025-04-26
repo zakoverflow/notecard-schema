@@ -4,16 +4,6 @@
     "title": "card.binary.get Response Application Programming Interface (API) Schema",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "status": {
             "description": "The MD5 checksum of the data returned, after it has been decoded",
             "type": "string"
@@ -22,5 +12,7 @@
             "description": "If present, a string describing the error that occurred during transmission",
             "type": "string"
         }
-    }
+    },
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

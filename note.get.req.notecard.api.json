@@ -5,16 +5,6 @@
     "description": "Retrieves a Note from a Notefile. The file must either be a DB Notefile or inbound queue file (see file argument below).",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "file": {
             "description": "Name of the notefile to get the note from",
             "type": "string"
@@ -58,5 +48,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

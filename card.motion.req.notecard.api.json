@@ -5,16 +5,6 @@
     "description": "Returns information about the Notecard accelerometer's motion and orientation. Motion tracking must be enabled first with card.motion.mode. Otherwise, this request will return {}.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "minutes": {
             "description": "Amount of time to sample for buckets of accelerometer-measured movement",
             "type": "integer"
@@ -50,5 +40,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

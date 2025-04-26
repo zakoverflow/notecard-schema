@@ -5,16 +5,6 @@
     "description": "Manually initiates a sync with Notehub.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "allow": {
             "description": "Whether to allow the sync to proceed",
             "type": "boolean"
@@ -58,5 +48,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

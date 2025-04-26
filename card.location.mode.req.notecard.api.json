@@ -5,16 +5,6 @@
     "description": "Sets location-related configuration settings. Retrieves the current location mode when passed with no argument.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "mode": {
             "description": "Must be one of: empty string to retrieve the current mode, 'off' to turn location mode off, 'periodic' to sample location at a specified interval, 'continuous' to enable the Notecard's GPS/GNSS module for continuous sampling, or 'fixed' to report the location as a fixed location",
             "type": "string",
@@ -78,5 +68,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

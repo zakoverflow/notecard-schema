@@ -5,16 +5,6 @@
     "description": "View the last known network state, or customize the behavior of the modem. Note: Be careful when using this mode with hardware not on hand as a mistake may cause loss of network and Notehub access.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "mode": {
             "description": "Network scan mode",
             "type": "string",
@@ -72,5 +62,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

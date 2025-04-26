@@ -5,16 +5,6 @@
     "description": "The hub.set request is the primary method for controlling the Notecard's Notehub connection and sync behavior.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "product": {
             "description": "Product identifier",
             "type": "string"
@@ -131,5 +121,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

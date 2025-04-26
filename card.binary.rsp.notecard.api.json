@@ -4,16 +4,6 @@
     "title": "card.binary Response Application Programming Interface (API) Schema",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "cobs": {
             "description": "The size of COBS-encoded data stored in the reserved area",
             "type": "integer"
@@ -30,5 +20,7 @@
             "description": "The length of the binary data",
             "type": "integer"
         }
-    }
+    },
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }
