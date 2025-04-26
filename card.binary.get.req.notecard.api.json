@@ -5,16 +5,6 @@
     "description": "Returns binary data stored in the binary storage area of the Notecard. The response to this API command first returns the JSON-formatted response object, then the binary data.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "cobs": {
             "description": "The size of the COBS-encoded data you are expecting to be returned (in bytes)",
             "type": "integer"
@@ -60,5 +50,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

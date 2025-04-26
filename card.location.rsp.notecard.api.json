@@ -4,16 +4,6 @@
     "title": "card.location Response Application Programming Interface (API) Schema",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "status": {
             "description": "The current status of the Notecard GPS/GNSS connection",
             "type": "string"
@@ -43,5 +33,7 @@
             "description": "Maximum number of seconds to wait for a GPS fix",
             "type": "integer"
         }
-    }
+    },
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

@@ -5,16 +5,6 @@
     "description": "Get the current temperature from the Notecard's onboard calibrated temperature sensor.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "minutes": {
             "description": "If specified, creates a templated _temp.qo file that gathers Notecard temperature value at the specified minutes interval",
             "type": "integer"
@@ -62,5 +52,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

@@ -4,19 +4,11 @@
     "title": "ntn.reset Response Application Programming Interface (API) Schema",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "success": {
             "description": "Whether the reset was successful",
             "type": "boolean"
         }
-    }
+    },
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

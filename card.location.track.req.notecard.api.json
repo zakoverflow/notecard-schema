@@ -5,16 +5,6 @@
     "description": "Store location data in a Notefile at the periodic interval, or using a specified heartbeat.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "start": {
             "description": "Set to true to start Notefile tracking",
             "type": "boolean"
@@ -71,5 +61,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

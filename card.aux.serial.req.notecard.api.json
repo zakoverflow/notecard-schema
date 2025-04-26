@@ -5,16 +5,6 @@
     "description": "Configure various uses of the AUXTX and AUXRX pins on the Notecard's edge connector.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "mode": {
             "description": "The AUX mode. Must be one of the following",
             "type": "string",
@@ -59,5 +49,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

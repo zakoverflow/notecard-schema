@@ -5,16 +5,6 @@
     "description": "Used along with the card.aux API to turn connected LEDs on/off (not supported by Notecard LoRa), or to manage a single connected NeoPixel.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "mode": {
             "description": "Used to specify the color of the LED to turn on or off. Possible values for LEDs are 'red', 'green', 'yellow'. For NeoPixels, possible values are 'red', 'green', 'blue', 'yellow', 'cyan', 'magenta', 'orange', 'white', 'gray'",
             "type": "string",
@@ -69,5 +59,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

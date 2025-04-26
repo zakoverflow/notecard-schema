@@ -4,16 +4,6 @@
     "title": "card.version Response Application Programming Interface (API) Schema",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "api": {
             "description": "Major version of the Notecard API",
             "type": "integer"
@@ -93,5 +83,7 @@
     },
     "required": [
         "version"
-    ]
+    ],
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

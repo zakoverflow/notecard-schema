@@ -5,16 +5,6 @@
     "description": "Used to perform queries on a single or multiple files to determine if new Notes are available to read, or if there are unsynced Notes in local Notefiles.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "files": {
             "description": "One or more files to obtain change information from",
             "type": "array",
@@ -57,5 +47,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

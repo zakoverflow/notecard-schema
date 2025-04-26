@@ -4,16 +4,6 @@
     "title": "card.contact Response Application Programming Interface (API) Schema",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "name": {
             "description": "Name of the Notecard maintainer",
             "type": "string"
@@ -30,5 +20,7 @@
             "description": "Email address of the Notecard maintainer",
             "type": "string"
         }
-    }
+    },
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }

@@ -5,16 +5,6 @@
     "description": "Retrieves downloaded firmware data from the Notecard for use with IAP host MCU firmware updates.",
     "type": "object",
     "properties": {
-        "manifestVersion": {
-            "description": "Semantic version of the schema",
-            "type": "string",
-            "const": "0.1.1"
-        },
-        "apiVersion": {
-            "description": "Semantic version of the Notecard API",
-            "type": "string",
-            "const": "9.1.1"
-        },
         "length": {
             "description": "The number of bytes of firmware data to read and return to the host",
             "type": "integer"
@@ -54,5 +44,7 @@
             }
         }
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "version": "0.1.1",
+    "apiVersion": "9.1.1"
 }
