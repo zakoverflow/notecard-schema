@@ -13,7 +13,7 @@ This repository contains the JSON schemas for the Notecard API.
 To update the version of Notecard firmware that the schemas are compatible with, run the following command:
 
 ```bash
-python scripts/increment_schema_version.py --property apiVersion --target-version 9.1.2 --pattern "card.attn.*"
+python scripts/update_schema_version.py --property apiVersion --target-version 9.1.2 --pattern "card.attn.*"
 ```
 
 This will update the `apiVersion` in all files that match the pattern `card.attn.*`.
