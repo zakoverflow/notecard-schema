@@ -6,7 +6,6 @@
     "version": "0.1.1",
     "apiVersion": "9.1.1",
     "oneOf": [
-        {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/reset.req.notecard.api.json"},
         {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.attn.req.notecard.api.json"},
         {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.aux.req.notecard.api.json"},
         {"$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.aux.serial.req.notecard.api.json"},
