@@ -95,7 +95,7 @@
             ],
             "properties": {
                 "req": {
-                    "const": "card.time"
+                    "const": "card.transport"
                 }
             }
         },
@@ -105,7 +105,7 @@
             ],
             "properties": {
                 "cmd": {
-                    "const": "card.time"
+                    "const": "card.transport"
                 }
             }
         }
