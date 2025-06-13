@@ -63,7 +63,7 @@ value appears as the tab header when multiple examples are present.
 
 #### `skus`
 
-An array indicating Notecard compatiblity at both the API and parameter level.
+An array indicating Notecard compatibility at both the API and parameter level.
 
 Some APIs and parameters are reserved for specific Notecard SKUs (e.g.
 `card.wifi` is used to configure the Wi-Fi connectivity of Wi-Fi compatible
@@ -77,10 +77,11 @@ Example shown from `card.transport`:
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.transport.req.notecard.api.json",
     "title": "card.transport Request Application Programming Interface (API) Schema",
+    "description": "Specifies the connectivity protocol to prioritize on the Notecard Cell+WiFi, or when using NTN mode with Starnote and a compatible Notecard.",
     "type": "object",
     "version": "0.2.1",
     "apiVersion": "9.1.1",
-    "skus": ["CELL","CELL+WIFI","WIFI"]
+    "skus": ["CELL","CELL+WIFI","WIFI"],
     "properties": {
         "method": {
             "description": "The connectivity method to enable on the Notecard.",
@@ -126,6 +127,8 @@ Example shown from `card.transport`:
 }
 ```
 
+> _**NOTE:** `skus` is valid at any level the `description` field is also valid._
+
 #### `sub-descriptions`
 
 An array of object providing a detailed description of enumerated or pattern
@@ -155,7 +158,7 @@ Example shown from `card.attn`:
         },
         {
             "const": "auxgpio",
-            "description": "When armed, causes ATTN to fire if an AUX GPIO input changes. Disable by using `-auxpgio`.",
+            "description": "When armed, causes ATTN to fire if an AUX GPIO input changes. Disable by using `-auxgpio`.",
             "skus": ["CELL","CELL+WIFI","LORA","WIFI"]
         },
         ...
