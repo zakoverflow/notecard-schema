@@ -86,6 +86,14 @@
             "description": "Set to `true` to force a longer network transport timeout when using Wideband Notecards.",
             "type": "boolean",
             "default": false
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.transport"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.transport"
         }
     },
     "oneOf": [
