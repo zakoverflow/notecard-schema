@@ -1,0 +1,88 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.wireless.penalty.req.notecard.api.json",
+    "title": "card.wireless.penalty Request Application Programming Interface (API) Schema",
+    "description": "Configure wireless connection penalties and timeouts for network operations on the Notecard.",
+    "type": "object",
+    "skus": [
+        "CELL",
+        "CELL+WIFI",
+        "WIFI"
+    ],
+    "version": "0.1.1",
+    "apiVersion": "9.1.1",
+    "properties": {
+        "seconds": {
+            "description": "The penalty timeout in seconds applied to failed wireless connections before retrying. Set to 0 to disable penalty timeouts.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 86400,
+            "default": 300
+        },
+        "max": {
+            "description": "Maximum number of penalty timeouts to apply before giving up on a connection attempt. Set to 0 for unlimited retries.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "default": 3
+        },
+        "multiplier": {
+            "description": "Multiplier applied to penalty timeout on each successive failure. For example, 2.0 would double the timeout each time.",
+            "type": "number",
+            "minimum": 1.0,
+            "maximum": 10.0,
+            "default": 1.5
+        },
+        "cmd": {
+            "description": "Command for the Notecard (no response)",
+            "const": "card.wireless.penalty"
+        },
+        "req": {
+            "description": "Request for the Notecard (expects response)",
+            "const": "card.wireless.penalty"
+        }
+    },
+    "oneOf": [
+        {
+            "required": [
+                "req"
+            ],
+            "properties": {
+                "req": {
+                    "const": "card.wireless.penalty"
+                }
+            }
+        },
+        {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "const": "card.wireless.penalty"
+                }
+            }
+        }
+    ],
+    "additionalProperties": false,
+    "samples": [
+        {
+            "description": "Basic penalty configuration request.",
+            "json": "{\"req\":\"card.wireless.penalty\"}"
+        },
+        {
+            "description": "Set penalty timeout to 5 minutes with exponential backoff.",
+            "json": "{\"req\":\"card.wireless.penalty\",\"seconds\":300,\"max\":5,\"multiplier\":2.0}"
+        },
+        {
+            "description": "Disable penalty timeouts.",
+            "json": "{\"cmd\":\"card.wireless.penalty\",\"seconds\":0}"
+        }
+    ],
+    "annotations": [
+        {
+            "title": "note",
+            "description": "Penalty configurations help manage network resources by introducing delays after failed connection attempts, preventing rapid retry loops that could impact battery life and network performance."
+        }
+    ]
+}

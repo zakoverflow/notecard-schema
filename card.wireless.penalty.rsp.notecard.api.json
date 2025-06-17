@@ -1,0 +1,42 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.wireless.penalty.rsp.notecard.api.json",
+    "title": "card.wireless.penalty Response Application Programming Interface (API) Schema",
+    "type": "object",
+    "version": "0.1.1",
+    "apiVersion": "9.1.1",
+    "properties": {
+        "seconds": {
+            "description": "Current penalty timeout in seconds",
+            "type": "integer"
+        },
+        "max": {
+            "description": "Current maximum number of penalty timeouts",
+            "type": "integer"
+        },
+        "multiplier": {
+            "description": "Current penalty timeout multiplier",
+            "type": "number"
+        },
+        "current": {
+            "description": "Current penalty level (0 if no penalty active)",
+            "type": "integer",
+            "minimum": 0
+        },
+        "remaining": {
+            "description": "Seconds remaining in current penalty timeout (0 if no penalty active)",
+            "type": "integer",
+            "minimum": 0
+        }
+    },
+    "samples": [
+        {
+            "description": "Current penalty configuration with no active penalty.",
+            "json": "{\"seconds\":300,\"max\":3,\"multiplier\":1.5,\"current\":0,\"remaining\":0}"
+        },
+        {
+            "description": "Active penalty status.",
+            "json": "{\"seconds\":300,\"max\":3,\"multiplier\":1.5,\"current\":2,\"remaining\":450}"
+        }
+    ]
+}
