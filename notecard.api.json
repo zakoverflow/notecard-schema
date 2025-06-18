@@ -70,15 +70,12 @@
             "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.monitor.req.notecard.api.json"
         },
         {
-<<<<<<< HEAD
             "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.random.req.notecard.api.json"
         },
         {
             "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.power.req.notecard.api.json"
         },
         {
-=======
->>>>>>> c7526bc (Create complete card.wireless.penalty schema with request/response and tests)
             "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.restart.req.notecard.api.json"
         },
         {
@@ -100,24 +97,18 @@
             "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.usage.get.req.notecard.api.json"
         },
         {
-<<<<<<< HEAD
             "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.usage.test.req.notecard.api.json"
         },
         {
-=======
->>>>>>> c7526bc (Create complete card.wireless.penalty schema with request/response and tests)
             "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.version.req.notecard.api.json"
         },
         {
             "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.voltage.req.notecard.api.json"
         },
         {
-<<<<<<< HEAD
-=======
             "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.wireless.penalty.req.notecard.api.json"
         },
         {
->>>>>>> c7526bc (Create complete card.wireless.penalty schema with request/response and tests)
             "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.wireless.req.notecard.api.json"
         },
         {
@@ -229,8 +220,4 @@
             "$ref": "https://raw.githubusercontent.com/blues/notecard-schema/master/web.req.notecard.api.json"
         }
     ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c7526bc (Create complete card.wireless.penalty schema with request/response and tests)
