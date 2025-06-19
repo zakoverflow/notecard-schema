@@ -6,7 +6,8 @@ on:
   workflow_dispatch
 
 env:
-  COPILOT_AGENT_FIREWALL_ALLOW_LIST_ADDITIONS: blues.io,blues.com,8.8.8.8,8.8.4.4
+  COPILOT_AGENT_FIREWALL_ENABLED: "false"
+  # COPILOT_AGENT_FIREWALL_ALLOW_LIST_ADDITIONS: blues.io,blues.com
 
 jobs:
   # The job MUST be called `copilot-setup-steps` or it will not be picked up
@@ -24,26 +25,4 @@ jobs:
       contents: read
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Install network tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y curl dnsutils
-      - name: Configure custom DNS
-        run: |
-          echo "Configuring custom DNS servers"
-          sudo sh -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
-          sudo sh -c 'echo "nameserver 8.8.4.4" >> /etc/resolv.conf'
-          cat /etc/resolv.conf
-      - name: Test DNS resolution
-        run: |
-          echo "Testing DNS resolution for blues.io and blues.com"
-          nslookup dev.blues.io || echo "DNS resolution failed for dev.blues.io"
-          nslookup discuss.blues.com || echo "DNS resolution failed for discuss.blues.com"
-      - name: Test HTTP access
-        run: |
-          echo "Testing HTTP access to allowed domains"
-          curl -I https://dev.blues.io --proxy $HTTPS_PROXY || echo "Failed to access dev.blues.io"
-          curl -I https://discuss.blues.com --proxy $HTTPS_PROXY || echo "Failed to access discuss.blues.com"
       - run: echo "Setup complete"
