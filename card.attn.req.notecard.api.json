@@ -243,44 +243,40 @@
     ],
     "samples": [
         {
-            "req": "card.attn",
-            "mode": "arm,connected"
+            "description": "Arm ATTN to fire on cellular connection",
+            "json": "{\"req\":\"card.attn\",\"mode\":\"arm,connected\"}"
         },
         {
-            "req": "card.attn",
-            "mode": "arm,files",
-            "files": ["data.qi", "my-settings.db"]
+            "description": "Arm ATTN to fire on file changes",
+            "json": "{\"req\":\"card.attn\",\"mode\":\"arm,files\",\"files\":[\"data.qi\",\"my-settings.db\"]}"
         },
         {
-            "req": "card.attn",
-            "mode": "arm,location"
+            "description": "Arm ATTN to fire on GPS location fix",
+            "json": "{\"req\":\"card.attn\",\"mode\":\"arm,location\"}"
         },
         {
-            "req": "card.attn",
-            "mode": "arm,motion"
+            "description": "Arm ATTN to fire on motion detection",
+            "json": "{\"req\":\"card.attn\",\"mode\":\"arm,motion\"}"
         },
         {
-            "req": "card.attn",
-            "mode": "arm,signal"
+            "description": "Arm ATTN to fire on signal reception",
+            "json": "{\"req\":\"card.attn\",\"mode\":\"arm,signal\"}"
         },
         {
-            "req": "card.attn",
-            "mode": "watchdog",
-            "seconds": 60
+            "description": "Set watchdog timer for 60 seconds",
+            "json": "{\"req\":\"card.attn\",\"mode\":\"watchdog\",\"seconds\":60}"
         },
         {
-            "req": "card.attn",
-            "mode": "sleep",
-            "seconds": 3600,
-            "payload": "ewogICJpbnRlcnZhbHMiOiI2MCwxMiwxNCIKfQ=="
+            "description": "Sleep mode with payload for 1 hour",
+            "json": "{\"req\":\"card.attn\",\"mode\":\"sleep\",\"seconds\":3600,\"payload\":\"ewogICJpbnRlcnZhbHMiOiI2MCwxMiwxNCIKfQ==\"}"
         },
         {
-            "req": "card.attn",
-            "start": true
+            "description": "Retrieve payload after waking from sleep",
+            "json": "{\"req\":\"card.attn\",\"start\":true}"
         },
         {
-            "req": "card.attn",
-            "mode": "disarm,-all"
+            "description": "Disarm all ATTN monitors",
+            "json": "{\"req\":\"card.attn\",\"mode\":\"disarm,-all\"}"
         }
     ],
     "version": "0.1.2",
