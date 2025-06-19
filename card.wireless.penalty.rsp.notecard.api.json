@@ -15,22 +15,18 @@
             "type": "integer"
         },
         "status": {
-            "description": "If the Notecard is in a Penalty Box, this field provides the associated Error and Status Codes.",
+            "description": "If the Notecard is in a [Penalty Box](https://dev.blues.io/guides-and-tutorials/notecard-guides/understanding-notecard-penalty-boxes/), this field provides the associated [Error and Status Codes](https://dev.blues.io/notecard/notecard-walkthrough/notecard-error-and-status-codes/).",
             "type": "string"
         },
         "seconds": {
-            "description": "If the Notecard is in a Penalty Box, the number of seconds until the penalty condition ends.",
+            "description": "If the Notecard is in a [Penalty Box](https://dev.blues.io/guides-and-tutorials/notecard-guides/understanding-notecard-penalty-boxes/), the number of seconds until the penalty condition ends.",
             "type": "integer"
         }
     },
     "samples": [
         {
-            "description": "Penalty Box status with active penalty.",
+            "description": "Penalty Box Status with Active Penalty.",
             "json": "{\"seconds\":3324,\"minutes\":69,\"status\":\"network: can't connect (55.4 min remaining) {registration-failure}{network}{extended-network-failure}\",\"count\":6}"
-        },
-        {
-            "description": "No active penalty status.",
-            "json": "{\"minutes\":0,\"count\":0}"
         }
     ]
 }
