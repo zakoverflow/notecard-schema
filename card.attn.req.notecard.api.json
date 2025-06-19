@@ -243,39 +243,48 @@
     ],
     "samples": [
         {
-            "description": "Arm ATTN to fire on cellular connection",
+            "title": "Connected",
+            "description": "Configure the Notecard to perform an interrupt on a successful connection to Notehub.",
             "json": "{\"req\":\"card.attn\",\"mode\":\"arm,connected\"}"
         },
         {
-            "description": "Arm ATTN to fire on file changes",
+            "title": "Files",
+            "description": "Configure the Notecard to perform an interrupt on the `data.qi` and `my-settings.db` Notefiles.",
             "json": "{\"req\":\"card.attn\",\"mode\":\"arm,files\",\"files\":[\"data.qi\",\"my-settings.db\"]}"
         },
         {
-            "description": "Arm ATTN to fire on GPS location fix",
+            "title": "Location",
+            "description": "Configure the Notecard to perform an interrupt when the Notecard makes a position fix.",
             "json": "{\"req\":\"card.attn\",\"mode\":\"arm,location\"}"
         },
         {
-            "description": "Arm ATTN to fire on motion detection",
+            "title": "Motion",
+            "description": "Configure the Notecard to perform an interrupt when the Notecard detects motion.",
             "json": "{\"req\":\"card.attn\",\"mode\":\"arm,motion\"}"
         },
         {
-            "description": "Arm ATTN to fire on signal reception",
+            "title": "Signal",
+            "description": "Configure the Notecard to perform an interrupt when the Notecard receives a signal.",
             "json": "{\"req\":\"card.attn\",\"mode\":\"arm,signal\"}"
         },
         {
-            "description": "Set watchdog timer for 60 seconds",
+            "title": "Watchdog",
+            "description": "Configure the Notecard to function as a watchdog timer with a 60 second timeout.",
             "json": "{\"req\":\"card.attn\",\"mode\":\"watchdog\",\"seconds\":60}"
         },
         {
-            "description": "Sleep mode with payload for 1 hour",
+            "title": "Sleep With Payload",
+            "description": "Configure the Notecard to instruct the host MCU to sleep for a period of time.",
             "json": "{\"req\":\"card.attn\",\"mode\":\"sleep\",\"seconds\":3600,\"payload\":\"ewogICJpbnRlcnZhbHMiOiI2MCwxMiwxNCIKfQ==\"}"
         },
         {
-            "description": "Retrieve payload after waking from sleep",
+            "title": "Retrieve Payload",
+            "description": "Retrieve a payload from the Notecard after sleep.",
             "json": "{\"req\":\"card.attn\",\"start\":true}"
         },
         {
-            "description": "Disarm all ATTN monitors",
+            "title": "Disarm all Modes",
+            "description": "Disarm all interrupts.",
             "json": "{\"req\":\"card.attn\",\"mode\":\"disarm,-all\"}"
         }
     ],
