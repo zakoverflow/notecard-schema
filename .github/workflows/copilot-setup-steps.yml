@@ -1,27 +1,15 @@
-name: GitHub Copilot Agent
+name: Copilot Setup Steps
 
 on:
   workflow_dispatch:
-  schedule:
-    # Run on a schedule to keep the agent active
-    - cron: '0 0 * * *'
 
 jobs:
   copilot-setup-steps:
     runs-on: ubuntu-latest
-
+    
     env:
-      # Allow access to blues.io and blues.com domains for Copilot Agent
       COPILOT_AGENT_FIREWALL_ALLOW_LIST_ADDITIONS: "blues.io,blues.com"
-
+    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Configure Copilot Agent Access
-        run: |
-          echo "Configuring GitHub Copilot Agent with domain access:"
-          echo "Allowed domains: $COPILOT_AGENT_FIREWALL_ALLOW_LIST_ADDITIONS"
-          echo "This allows the Copilot Agent to access:"
-          echo "- https://dev.blues.io for API documentation and resources"
-          echo "- https://discuss.blues.com for community discussions and support"
+      - name: Setup environment
+        run: echo "Setting up environment for Copilot agent"
