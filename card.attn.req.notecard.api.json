@@ -241,52 +241,6 @@
             }
         }
     ],
-    "samples": [
-        {
-            "description": "Check current ATTN status",
-            "json": "{\"req\":\"card.attn\",\"verify\":true}"
-        },
-        {
-            "description": "Arm ATTN (ready to fire on events)",
-            "json": "{\"req\":\"card.attn\",\"mode\":\"arm\"}"
-        },
-        {
-            "description": "Monitor specific Notefiles for changes",
-            "json": "{\"req\":\"card.attn\",\"mode\":\"files\",\"files\":[\"data.qo\",\"_track.qi\"]}"
-        },
-        {
-            "description": "Enable motion detection",
-            "json": "{\"req\":\"card.attn\",\"mode\":\"motion\"}"
-        },
-        {
-            "description": "Setup watchdog timer (minimum 60 seconds)",
-            "json": "{\"req\":\"card.attn\",\"mode\":\"watchdog\",\"seconds\":120}"
-        },
-        {
-            "description": "Sleep mode with payload storage",
-            "json": "{\"req\":\"card.attn\",\"mode\":\"sleep\",\"seconds\":300,\"payload\":\"SGVsbG8gV29ybGQ=\"}"
-        },
-        {
-            "description": "Retrieve payload after sleep",
-            "json": "{\"req\":\"card.attn\",\"start\":true}"
-        },
-        {
-            "description": "Monitor multiple events",
-            "json": "{\"req\":\"card.attn\",\"mode\":\"motion,location,signal\"}"
-        },
-        {
-            "description": "Disarm all ATTN monitors",
-            "json": "{\"req\":\"card.attn\",\"mode\":\"disarm,-all\"}"
-        },
-        {
-            "description": "Enable ATTN processing",
-            "json": "{\"req\":\"card.attn\",\"on\":true}"
-        },
-        {
-            "description": "Disable ATTN processing completely",
-            "json": "{\"req\":\"card.attn\",\"off\":true}"
-        }
-    ],
     "version": "0.1.2",
     "apiVersion": "9.1.1"
 }
