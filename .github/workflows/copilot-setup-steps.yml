@@ -1,13 +1,13 @@
-name: Copilot Setup Steps
+name: copilot-setup-steps
 
 on:
   workflow_dispatch:
 
 env:
-  COPILOT_AGENT_FIREWALL_ALLOW_LIST_ADDITIONS: "blues.io,blues.com"
+  COPILOT_AGENT_FIREWALL_ALLOW_LIST_ADDITIONS: blues.io,blues.com
 
 jobs:
   copilot-setup-steps:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Copilot setup complete"
+      - run: echo "Setup complete"
