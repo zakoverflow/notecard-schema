@@ -241,6 +241,51 @@
             }
         }
     ],
+    "samples": [
+        {
+            "req": "card.attn"
+        },
+        {
+            "req": "card.attn",
+            "mode": "arm,connected"
+        },
+        {
+            "req": "card.attn",
+            "mode": "arm,files",
+            "files": ["data.qi", "my-settings.db"]
+        },
+        {
+            "req": "card.attn",
+            "mode": "arm,location"
+        },
+        {
+            "req": "card.attn",
+            "mode": "arm,motion"
+        },
+        {
+            "req": "card.attn",
+            "mode": "arm,signal"
+        },
+        {
+            "req": "card.attn",
+            "mode": "watchdog",
+            "seconds": 60
+        },
+        {
+            "req": "card.attn",
+            "mode": "sleep",
+            "seconds": 3600,
+            "payload": "ewogICJpbnRlcnZhbHMiOiI2MCwxMiwxNCIKfQ=="
+        },
+        {
+            "req": "card.attn",
+            "start": true
+        },
+        {
+            "req": "card.attn",
+            "mode": "disarm,-all"
+        }
+    ],
     "version": "0.1.2",
     "apiVersion": "9.1.1"
 }
