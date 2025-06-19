@@ -6,37 +6,31 @@
     "version": "0.1.1",
     "apiVersion": "9.1.1",
     "properties": {
+        "minutes": {
+            "description": "The time since the first network registration failure.",
+            "type": "integer"
+        },
+        "count": {
+            "description": "The number of consecutive network registration failures.",
+            "type": "integer"
+        },
+        "status": {
+            "description": "If the Notecard is in a Penalty Box, this field provides the associated Error and Status Codes.",
+            "type": "string"
+        },
         "seconds": {
-            "description": "Current penalty timeout in seconds",
+            "description": "If the Notecard is in a Penalty Box, the number of seconds until the penalty condition ends.",
             "type": "integer"
-        },
-        "max": {
-            "description": "Current maximum number of penalty timeouts",
-            "type": "integer"
-        },
-        "multiplier": {
-            "description": "Current penalty timeout multiplier",
-            "type": "number"
-        },
-        "current": {
-            "description": "Current penalty level (0 if no penalty active)",
-            "type": "integer",
-            "minimum": 0
-        },
-        "remaining": {
-            "description": "Seconds remaining in current penalty timeout (0 if no penalty active)",
-            "type": "integer",
-            "minimum": 0
         }
     },
     "samples": [
         {
-            "description": "Current penalty configuration with no active penalty.",
-            "json": "{\"seconds\":300,\"max\":3,\"multiplier\":1.5,\"current\":0,\"remaining\":0}"
+            "description": "Penalty Box status with active penalty.",
+            "json": "{\"seconds\":3324,\"minutes\":69,\"status\":\"network: can't connect (55.4 min remaining) {registration-failure}{network}{extended-network-failure}\",\"count\":6}"
         },
         {
-            "description": "Active penalty status.",
-            "json": "{\"seconds\":300,\"max\":3,\"multiplier\":1.5,\"current\":2,\"remaining\":450}"
+            "description": "No active penalty status.",
+            "json": "{\"minutes\":0,\"count\":0}"
         }
     ]
 }

@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.wireless.penalty.req.notecard.api.json",
     "title": "card.wireless.penalty Request Application Programming Interface (API) Schema",
-    "description": "Configure wireless connection penalties and timeouts for network operations on the Notecard.",
+    "description": "View the current state of a Notecard Penalty Box, manually remove the Notecard from a penalty box, or override penalty box defaults.",
     "type": "object",
     "skus": [
         "CELL",
@@ -12,26 +12,33 @@
     "version": "0.1.1",
     "apiVersion": "9.1.1",
     "properties": {
-        "seconds": {
-            "description": "The penalty timeout in seconds applied to failed wireless connections before retrying. Set to 0 to disable penalty timeouts.",
+        "reset": {
+            "description": "Set to true to remove the Notecard from certain types of penalty boxes.",
+            "type": "boolean"
+        },
+        "set": {
+            "description": "Set to true to override the default settings of the Network Registration Failure Penalty Box.",
+            "type": "boolean"
+        },
+        "rate": {
+            "description": "The rate at which the penalty box time multiplier is increased over successive retries. Used with the set argument to override the Network Registration Failure Penalty Box defaults.",
+            "type": "number",
+            "default": 1.25
+        },
+        "add": {
+            "description": "The number of minutes to add to successive retries. Used with the set argument to override the Network Registration Failure Penalty Box defaults.",
             "type": "integer",
-            "minimum": 0,
-            "maximum": 86400,
-            "default": 300
+            "default": 15
         },
         "max": {
-            "description": "Maximum number of penalty timeouts to apply before giving up on a connection attempt. Set to 0 for unlimited retries.",
+            "description": "The maximum number of minutes that a device can be in a Network Registration Failure Penalty Box. Used with the set argument to override the Network Registration Failure Penalty Box defaults.",
             "type": "integer",
-            "minimum": 0,
-            "maximum": 100,
-            "default": 3
+            "default": 4320
         },
-        "multiplier": {
-            "description": "Multiplier applied to penalty timeout on each successive failure. For example, 2.0 would double the timeout each time.",
-            "type": "number",
-            "minimum": 1.0,
-            "maximum": 10.0,
-            "default": 1.5
+        "min": {
+            "description": "The number of minutes of the first retry interval of a Network Registration Failure Penalty Box. Used with the set argument to override the Network Registration Failure Penalty Box defaults.",
+            "type": "integer",
+            "default": 15
         },
         "cmd": {
             "description": "Command for the Notecard (no response)",
@@ -67,22 +74,22 @@
     "additionalProperties": false,
     "samples": [
         {
-            "description": "Basic penalty configuration request.",
+            "description": "Check Penalty Box State.",
             "json": "{\"req\":\"card.wireless.penalty\"}"
         },
         {
-            "description": "Set penalty timeout to 5 minutes with exponential backoff.",
-            "json": "{\"req\":\"card.wireless.penalty\",\"seconds\":300,\"max\":5,\"multiplier\":2.0}"
+            "description": "Remove from Penalty Box.",
+            "json": "{\"req\":\"card.wireless.penalty\",\"reset\":true}"
         },
         {
-            "description": "Disable penalty timeouts.",
-            "json": "{\"cmd\":\"card.wireless.penalty\",\"seconds\":0}"
+            "description": "Override Default Penalty Box Settings.",
+            "json": "{\"req\":\"card.wireless.penalty\",\"set\":true,\"rate\":2.0,\"add\":10,\"max\":720,\"min\":5}"
         }
     ],
     "annotations": [
         {
-            "title": "note",
-            "description": "Penalty configurations help manage network resources by introducing delays after failed connection attempts, preventing rapid retry loops that could impact battery life and network performance."
+            "title": "warning",
+            "description": "The misuse of this feature may result in the cellular carrier preventing the Notecard from future connections because it's effectively \"spamming\" the network. The cellular carrier may blacklist devices that it thinks are attempting to connect too frequently."
         }
     ]
 }

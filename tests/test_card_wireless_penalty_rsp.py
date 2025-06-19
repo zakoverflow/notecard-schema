@@ -9,94 +9,81 @@ def test_minimal_valid_rsp(schema):
     instance = {}
     jsonschema.validate(instance=instance, schema=schema)
 
+def test_valid_minutes(schema):
+    """Tests valid minutes field."""
+    instance = {"minutes": 69}
+    jsonschema.validate(instance=instance, schema=schema)
+    instance = {"minutes": 0}
+    jsonschema.validate(instance=instance, schema=schema)
+
+def test_minutes_invalid_type(schema):
+    """Tests invalid type for minutes."""
+    instance = {"minutes": "69"}
+    with pytest.raises(jsonschema.ValidationError) as excinfo:
+        jsonschema.validate(instance=instance, schema=schema)
+    assert "'69' is not of type 'integer'" in str(excinfo.value)
+
+def test_valid_count(schema):
+    """Tests valid count field."""
+    instance = {"count": 6}
+    jsonschema.validate(instance=instance, schema=schema)
+    instance = {"count": 0}
+    jsonschema.validate(instance=instance, schema=schema)
+
+def test_count_invalid_type(schema):
+    """Tests invalid type for count."""
+    instance = {"count": "6"}
+    with pytest.raises(jsonschema.ValidationError) as excinfo:
+        jsonschema.validate(instance=instance, schema=schema)
+    assert "'6' is not of type 'integer'" in str(excinfo.value)
+
+def test_valid_status(schema):
+    """Tests valid status field."""
+    instance = {"status": "network: can't connect (55.4 min remaining) {registration-failure}{network}{extended-network-failure}"}
+    jsonschema.validate(instance=instance, schema=schema)
+
+def test_status_invalid_type(schema):
+    """Tests invalid type for status."""
+    instance = {"status": 123}
+    with pytest.raises(jsonschema.ValidationError) as excinfo:
+        jsonschema.validate(instance=instance, schema=schema)
+    assert "123 is not of type 'string'" in str(excinfo.value)
+
 def test_valid_seconds(schema):
     """Tests valid seconds field."""
-    instance = {"seconds": 300}
+    instance = {"seconds": 3324}
     jsonschema.validate(instance=instance, schema=schema)
 
 def test_seconds_invalid_type(schema):
     """Tests invalid type for seconds."""
-    instance = {"seconds": "300"}
+    instance = {"seconds": "3324"}
     with pytest.raises(jsonschema.ValidationError) as excinfo:
         jsonschema.validate(instance=instance, schema=schema)
-    assert "'300' is not of type 'integer'" in str(excinfo.value)
-
-def test_valid_max(schema):
-    """Tests valid max field."""
-    instance = {"max": 5}
-    jsonschema.validate(instance=instance, schema=schema)
-
-def test_max_invalid_type(schema):
-    """Tests invalid type for max."""
-    instance = {"max": "5"}
-    with pytest.raises(jsonschema.ValidationError) as excinfo:
-        jsonschema.validate(instance=instance, schema=schema)
-    assert "'5' is not of type 'integer'" in str(excinfo.value)
-
-def test_valid_multiplier(schema):
-    """Tests valid multiplier field."""
-    instance = {"multiplier": 1.5}
-    jsonschema.validate(instance=instance, schema=schema)
-
-def test_multiplier_invalid_type(schema):
-    """Tests invalid type for multiplier."""
-    instance = {"multiplier": "1.5"}
-    with pytest.raises(jsonschema.ValidationError) as excinfo:
-        jsonschema.validate(instance=instance, schema=schema)
-    assert "'1.5' is not of type 'number'" in str(excinfo.value)
-
-def test_valid_current(schema):
-    """Tests valid current field."""
-    instance = {"current": 2}
-    jsonschema.validate(instance=instance, schema=schema)
-
-def test_current_invalid_type(schema):
-    """Tests invalid type for current."""
-    instance = {"current": "2"}
-    with pytest.raises(jsonschema.ValidationError) as excinfo:
-        jsonschema.validate(instance=instance, schema=schema)
-    assert "'2' is not of type 'integer'" in str(excinfo.value)
-
-def test_current_negative_value(schema):
-    """Tests invalid negative value for current."""
-    instance = {"current": -1}
-    with pytest.raises(jsonschema.ValidationError) as excinfo:
-        jsonschema.validate(instance=instance, schema=schema)
-    assert "-1 is less than the minimum of 0" in str(excinfo.value)
-
-def test_valid_remaining(schema):
-    """Tests valid remaining field."""
-    instance = {"remaining": 180}
-    jsonschema.validate(instance=instance, schema=schema)
-
-def test_remaining_invalid_type(schema):
-    """Tests invalid type for remaining."""
-    instance = {"remaining": "180"}
-    with pytest.raises(jsonschema.ValidationError) as excinfo:
-        jsonschema.validate(instance=instance, schema=schema)
-    assert "'180' is not of type 'integer'" in str(excinfo.value)
-
-def test_remaining_negative_value(schema):
-    """Tests invalid negative value for remaining."""
-    instance = {"remaining": -1}
-    with pytest.raises(jsonschema.ValidationError) as excinfo:
-        jsonschema.validate(instance=instance, schema=schema)
-    assert "-1 is less than the minimum of 0" in str(excinfo.value)
+    assert "'3324' is not of type 'integer'" in str(excinfo.value)
 
 def test_valid_all_fields(schema):
     """Tests valid response with all fields."""
     instance = {
-        "seconds": 300,
-        "max": 3,
-        "multiplier": 1.5,
-        "current": 2,
-        "remaining": 450
+        "seconds": 3324,
+        "minutes": 69,
+        "status": "network: can't connect (55.4 min remaining) {registration-failure}{network}{extended-network-failure}",
+        "count": 6
     }
+    jsonschema.validate(instance=instance, schema=schema)
+
+def test_valid_no_penalty_status(schema):
+    """Tests valid response with no active penalty."""
+    instance = {"minutes": 0, "count": 0}
+    jsonschema.validate(instance=instance, schema=schema)
+
+def test_valid_partial_fields(schema):
+    """Tests valid response with partial fields."""
+    instance = {"count": 3, "minutes": 15}
     jsonschema.validate(instance=instance, schema=schema)
 
 def test_valid_additional_property(schema):
     """Tests valid response with an additional property."""
-    instance = {"seconds": 300, "additional": "property"}
+    instance = {"minutes": 69, "additional": "property"}
     jsonschema.validate(instance=instance, schema=schema)
 
 def test_validate_samples_from_schema(schema, schema_samples):

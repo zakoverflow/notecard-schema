@@ -42,65 +42,105 @@ def test_invalid_additional_property_with_cmd(schema):
         jsonschema.validate(instance=instance, schema=schema)
     assert "Additional properties are not allowed ('extra' was unexpected)" in str(excinfo.value)
 
-def test_valid_seconds(schema):
-    """Tests valid seconds field."""
-    instance = {"req": "card.wireless.penalty", "seconds": 300}
+def test_valid_reset(schema):
+    """Tests valid reset field."""
+    instance = {"req": "card.wireless.penalty", "reset": True}
     jsonschema.validate(instance=instance, schema=schema)
-    instance = {"req": "card.wireless.penalty", "seconds": 0}
+    instance = {"req": "card.wireless.penalty", "reset": False}
     jsonschema.validate(instance=instance, schema=schema)
 
-def test_seconds_invalid_type(schema):
-    """Tests invalid type for seconds."""
-    instance = {"req": "card.wireless.penalty", "seconds": "300"}
+def test_reset_invalid_type(schema):
+    """Tests invalid type for reset."""
+    instance = {"req": "card.wireless.penalty", "reset": "true"}
     with pytest.raises(jsonschema.ValidationError) as excinfo:
         jsonschema.validate(instance=instance, schema=schema)
-    assert "'300' is not of type 'integer'" in str(excinfo.value)
+    assert "'true' is not of type 'boolean'" in str(excinfo.value)
 
-def test_seconds_out_of_range(schema):
-    """Tests seconds value out of range."""
-    instance = {"req": "card.wireless.penalty", "seconds": -1}
+def test_valid_set(schema):
+    """Tests valid set field."""
+    instance = {"req": "card.wireless.penalty", "set": True}
+    jsonschema.validate(instance=instance, schema=schema)
+    instance = {"req": "card.wireless.penalty", "set": False}
+    jsonschema.validate(instance=instance, schema=schema)
+
+def test_set_invalid_type(schema):
+    """Tests invalid type for set."""
+    instance = {"req": "card.wireless.penalty", "set": "true"}
     with pytest.raises(jsonschema.ValidationError) as excinfo:
         jsonschema.validate(instance=instance, schema=schema)
-    assert "-1 is less than the minimum of 0" in str(excinfo.value)
+    assert "'true' is not of type 'boolean'" in str(excinfo.value)
 
-def test_valid_max(schema):
-    """Tests valid max field."""
-    instance = {"req": "card.wireless.penalty", "max": 5}
+def test_valid_rate(schema):
+    """Tests valid rate field."""
+    instance = {"req": "card.wireless.penalty", "rate": 2.0}
     jsonschema.validate(instance=instance, schema=schema)
-    instance = {"req": "card.wireless.penalty", "max": 0}
-    jsonschema.validate(instance=instance, schema=schema)
-
-def test_max_invalid_type(schema):
-    """Tests invalid type for max."""
-    instance = {"req": "card.wireless.penalty", "max": "5"}
-    with pytest.raises(jsonschema.ValidationError) as excinfo:
-        jsonschema.validate(instance=instance, schema=schema)
-    assert "'5' is not of type 'integer'" in str(excinfo.value)
-
-def test_valid_multiplier(schema):
-    """Tests valid multiplier field."""
-    instance = {"req": "card.wireless.penalty", "multiplier": 2.0}
-    jsonschema.validate(instance=instance, schema=schema)
-    instance = {"req": "card.wireless.penalty", "multiplier": 1.0}
+    instance = {"req": "card.wireless.penalty", "rate": 1.25}
     jsonschema.validate(instance=instance, schema=schema)
 
-def test_multiplier_invalid_type(schema):
-    """Tests invalid type for multiplier."""
-    instance = {"req": "card.wireless.penalty", "multiplier": "2.0"}
+def test_rate_invalid_type(schema):
+    """Tests invalid type for rate."""
+    instance = {"req": "card.wireless.penalty", "rate": "2.0"}
     with pytest.raises(jsonschema.ValidationError) as excinfo:
         jsonschema.validate(instance=instance, schema=schema)
     assert "'2.0' is not of type 'number'" in str(excinfo.value)
 
-def test_multiplier_out_of_range(schema):
-    """Tests multiplier value out of range."""
-    instance = {"req": "card.wireless.penalty", "multiplier": 0.5}
+def test_valid_add(schema):
+    """Tests valid add field."""
+    instance = {"req": "card.wireless.penalty", "add": 10}
+    jsonschema.validate(instance=instance, schema=schema)
+    instance = {"req": "card.wireless.penalty", "add": 15}
+    jsonschema.validate(instance=instance, schema=schema)
+
+def test_add_invalid_type(schema):
+    """Tests invalid type for add."""
+    instance = {"req": "card.wireless.penalty", "add": "10"}
     with pytest.raises(jsonschema.ValidationError) as excinfo:
         jsonschema.validate(instance=instance, schema=schema)
-    assert "0.5 is less than the minimum of 1" in str(excinfo.value)
+    assert "'10' is not of type 'integer'" in str(excinfo.value)
 
-def test_valid_all_fields(schema):
-    """Tests valid request with all fields."""
-    instance = {"req": "card.wireless.penalty", "seconds": 300, "max": 5, "multiplier": 2.0}
+def test_valid_max(schema):
+    """Tests valid max field."""
+    instance = {"req": "card.wireless.penalty", "max": 720}
+    jsonschema.validate(instance=instance, schema=schema)
+    instance = {"req": "card.wireless.penalty", "max": 4320}
+    jsonschema.validate(instance=instance, schema=schema)
+
+def test_max_invalid_type(schema):
+    """Tests invalid type for max."""
+    instance = {"req": "card.wireless.penalty", "max": "720"}
+    with pytest.raises(jsonschema.ValidationError) as excinfo:
+        jsonschema.validate(instance=instance, schema=schema)
+    assert "'720' is not of type 'integer'" in str(excinfo.value)
+
+def test_valid_min(schema):
+    """Tests valid min field."""
+    instance = {"req": "card.wireless.penalty", "min": 5}
+    jsonschema.validate(instance=instance, schema=schema)
+    instance = {"req": "card.wireless.penalty", "min": 15}
+    jsonschema.validate(instance=instance, schema=schema)
+
+def test_min_invalid_type(schema):
+    """Tests invalid type for min."""
+    instance = {"req": "card.wireless.penalty", "min": "5"}
+    with pytest.raises(jsonschema.ValidationError) as excinfo:
+        jsonschema.validate(instance=instance, schema=schema)
+    assert "'5' is not of type 'integer'" in str(excinfo.value)
+
+def test_valid_set_with_override_fields(schema):
+    """Tests valid request with set and override fields."""
+    instance = {
+        "req": "card.wireless.penalty", 
+        "set": True, 
+        "rate": 2.0, 
+        "add": 10, 
+        "max": 720, 
+        "min": 5
+    }
+    jsonschema.validate(instance=instance, schema=schema)
+
+def test_valid_reset_only(schema):
+    """Tests valid request with only reset field."""
+    instance = {"req": "card.wireless.penalty", "reset": True}
     jsonschema.validate(instance=instance, schema=schema)
 
 def test_validate_samples_from_schema(schema, schema_samples):
