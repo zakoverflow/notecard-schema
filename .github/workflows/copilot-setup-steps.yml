@@ -7,7 +7,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  configure-copilot-agent:
+  copilot-setup-steps:
     runs-on: ubuntu-latest
 
     env:
