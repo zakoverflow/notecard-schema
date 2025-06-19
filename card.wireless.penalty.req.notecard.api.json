@@ -36,7 +36,7 @@
             "default": 4320
         },
         "min": {
-            "description": "The number of minutes of the first retry interval of a Network Registration Failure Penalty Box. Used with the set argument to override the Network Registration Failure Penalty Box defaults.",
+            "description": "The number of minutes of the first retry interval of a Network Registration Failure Penalty Box. Used with the `set` argument to override the Network Registration Failure Penalty Box defaults.",
             "type": "integer",
             "default": 15
         },
