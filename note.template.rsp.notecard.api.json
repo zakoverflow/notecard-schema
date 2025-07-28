@@ -2,13 +2,37 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/note.template.rsp.notecard.api.json",
     "title": "note.template Response Application Programming Interface (API) Schema",
+    "description": "Response from the note.template request indicating whether the template was successfully applied to the specified Notefile.",
     "type": "object",
     "properties": {
-        "success": {
-            "description": "Whether the template was set successfully",
-            "type": "boolean"
+        "total": {
+            "description": "The total number of bytes that will be used for templated Notes using this template.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "template": {
+            "description": "The total number of bytes that will be used for the Note template portion.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "body": {
+            "description": "The total number of bytes that will be used for the Note body portion.",
+            "type": "integer",
+            "minimum": 0
         }
     },
-    "version": "0.1.1",
+    "samples": [
+        {
+            "title": "Template Applied Successfully",
+            "description": "Response indicating the template was applied and showing the byte usage for the binary storage optimization.",
+            "json": "{\"total\":32,\"template\":16,\"body\":16}"
+        },
+        {
+            "title": "Body Template Only",
+            "description": "Response when only a body template was specified.",
+            "json": "{\"total\":20,\"body\":20}"
+        }
+    ],
+    "version": "0.2.0",
     "apiVersion": "9.1.1"
 }
