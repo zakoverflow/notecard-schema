@@ -66,23 +66,6 @@
             ]
         }
     ],
-    "samples": [
-        {
-            "title": "Basic Note Template",
-            "description": "Set up a template for a simple sensor data Notefile with both Note metadata and body structure.",
-            "json": "{\"req\":\"note.template\",\"file\":\"sensor.qo\",\"template\":{\"location\":true,\"timestamp\":14.1},\"body\":{\"temperature\":14.1,\"humidity\":14.1}}"
-        },
-        {
-            "title": "Body Template Only",
-            "description": "Set up a template that only defines the body structure for tracking data.",
-            "json": "{\"req\":\"note.template\",\"file\":\"tracking.qo\",\"body\":{\"lat\":14.1,\"lon\":14.1,\"speed\":14.1}}"
-        },
-        {
-            "title": "Note Template Only",
-            "description": "Set up a template that only defines the Note metadata structure.",
-            "json": "{\"req\":\"note.template\",\"file\":\"events.qo\",\"template\":{\"urgent\":true,\"category\":\"string\"}}"
-        }
-    ],
     "version": "0.2.0",
     "apiVersion": "9.1.1"
 }

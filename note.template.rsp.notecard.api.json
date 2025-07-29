@@ -21,18 +21,6 @@
             "minimum": 0
         }
     },
-    "samples": [
-        {
-            "title": "Template Applied Successfully",
-            "description": "Response indicating the template was applied and showing the byte usage for the binary storage optimization.",
-            "json": "{\"total\":32,\"template\":16,\"body\":16}"
-        },
-        {
-            "title": "Body Template Only",
-            "description": "Response when only a body template was specified.",
-            "json": "{\"total\":20,\"body\":20}"
-        }
-    ],
     "version": "0.2.0",
     "apiVersion": "9.1.1"
 }
