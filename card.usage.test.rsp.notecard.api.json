@@ -2,53 +2,52 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/blues/notecard-schema/master/card.usage.test.rsp.notecard.api.json",
     "title": "card.usage.test Response Application Programming Interface (API) Schema",
-    "description": "Returns the results of a data usage test simulation, providing estimates for device lifetime based on historical data patterns.",
     "type": "object",
     "version": "0.2.1",
     "apiVersion": "9.1.1",
     "properties": {
         "max": {
-            "description": "The maximum projected days of data availability based on the test results and specified quota.",
+            "description": "The days of projected data available based on test.",
             "type": "integer"
         },
         "days": {
-            "description": "The number of days used in the test analysis period.",
+            "description": "The number of days used for the test.",
             "type": "integer"
         },
         "bytes_per_day": {
-            "description": "Average bytes per day consumed during the analyzed test period.",
+            "description": "Average bytes per day used during the test period.",
             "type": "integer"
         },
         "seconds": {
-            "description": "Total number of seconds in the analyzed test period.",
+            "description": "Number of seconds in the analyzed period.",
             "type": "integer"
         },
         "time": {
-            "description": "Start time (Unix epoch seconds) of the analyzed period.",
+            "description": "Time of device activation (UNIX Epoch time).",
             "type": "integer"
         },
         "bytes_sent": {
-            "description": "Number of bytes sent by the Notecard to Notehub during the test period.",
+            "description": "Number of bytes sent by the Notecard to Notehub.",
             "type": "integer"
         },
         "bytes_received": {
-            "description": "Number of bytes received by the Notecard from Notehub during the test period.",
+            "description": "Number of bytes received by the Notecard from Notehub.",
             "type": "integer"
         },
         "notes_sent": {
-            "description": "Approximate number of Notes sent by the Notecard to Notehub during the test period.",
+            "description": "Number of notes sent by the Notecard to Notehub.",
             "type": "integer"
         },
         "notes_received": {
-            "description": "Approximate number of Notes received by the Notecard from Notehub during the test period.",
+            "description": "Number of notes received by the Notecard from Notehub.",
             "type": "integer"
         },
         "sessions_standard": {
-            "description": "Number of standard Notehub sessions during the test period.",
+            "description": "Number of standard Notehub sessions.",
             "type": "integer"
         },
         "sessions_secure": {
-            "description": "Number of secure Notehub sessions during the test period.",
+            "description": "Number of secure Notehub sessions.",
             "type": "integer"
         }
     },
