@@ -23,7 +23,7 @@
             "type": "integer"
         },
         "time": {
-            "description": "Time of device activation (UNIX Epoch time).",
+            "description": "Time of device activation.",
             "type": "integer"
         },
         "bytes_sent": {
